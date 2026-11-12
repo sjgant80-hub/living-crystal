@@ -1,0 +1,9 @@
+{
+ "name": "Living Crystal · rung one",
+ "short_name": "Living Crystal",
+ "description": "Verified routing rules cast as the weights of a settling network on an emulated analogue crossbar. An emulator, not a chip.",
+ "start_url": "./",
+ "display": "standalone",
+ "background_color": "#f6f5f1",
+ "theme_color": "#3d5f80"
+}

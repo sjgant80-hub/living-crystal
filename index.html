@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Living Crystal · rung one</title>
+<meta name="description" content="The first rung of the Living Crystal: verified routing rules cast as the weights of a settling network on an emulated analogue crossbar. The decision is made by settling. Sealed claims, a held-out match, where it breaks, every failure kept. An emulator, not a chip.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 28 9v14l-12 7L4 23V9z' fill='%234a6a8a'/%3E%3Cpath d='M16 2v28M4 9l24 14M28 9 4 23' stroke='%23fff' stroke-width='1.2' fill='none' opacity='.6'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#f6f5f1;--panel:#ffffff;--ink:#1c1d1f;--muted:#646770;--line:rgba(28,29,31,.13);--accent:#3d5f80;--accent-dim:rgba(61,95,128,.10);--win:#2f7a3d;--tie:#a5701c;--bad:#b3452c;--h:#3d5f80;--g:#7a4d8c;--off:#e7e6e1;--mono:'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace;--sans:'Inter',-apple-system,system-ui,sans-serif;--serif:'Cormorant Garamond','Iowan Old Style',Georgia,serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17191d;--panel:#1f2228;--ink:#e6e3dc;--muted:#959aa3;--line:rgba(230,227,220,.13);--accent:#86a7c8;--accent-dim:rgba(134,167,200,.14);--win:#7acc85;--tie:#d4a052;--bad:#d67a5a;--h:#86a7c8;--g:#c39ad4;--off:#2b2f36}}
+:root[data-theme="dark"]{--bg:#17191d;--panel:#1f2228;--ink:#e6e3dc;--muted:#959aa3;--line:rgba(230,227,220,.13);--accent:#86a7c8;--accent-dim:rgba(134,167,200,.14);--win:#7acc85;--tie:#d4a052;--bad:#d67a5a;--h:#86a7c8;--g:#c39ad4;--off:#2b2f36}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none !important}
+html,body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+main{max-width:1060px;margin:0 auto;padding:0 16px 64px}
+nav.top{position:sticky;top:0;z-index:3;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:14px;flex-wrap:wrap;padding:8px 16px;font-family:var(--mono);font-size:12px}
+nav.top a{color:var(--muted);text-decoration:none} nav.top a:hover{color:var(--accent)}
+header.hero{max-width:1060px;margin:0 auto;padding:36px 16px 10px}
+h1{font-family:var(--serif);font-size:clamp(34px,6vw,58px);line-height:1.05;font-weight:600}
+.lede{font-size:19px;color:var(--muted);max-width:800px;margin-top:10px}
+.verdictline{font-size:17px;margin-top:12px;max-width:800px}
+.notchip{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:12.5px;border:1px solid var(--bad);color:var(--bad);border-radius:6px;padding:4px 10px}
+section{margin-top:44px;scroll-margin-top:48px}
+h2{font-family:var(--serif);font-size:30px;font-weight:600;margin-bottom:8px}
+h3{font-size:16px;margin:16px 0 6px}
+p+p{margin-top:8px} ul,ol{padding-left:22px} li{margin:4px 0}
+.muted{color:var(--muted)} .small{font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.card .k{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.card .big{font-size:24px;font-weight:600;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.card .vs{font-size:14px;color:var(--muted)}
+.chip{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.06em;padding:2px 10px;border-radius:12px;white-space:nowrap}
+.chip.win{background:color-mix(in srgb,var(--win) 15%,transparent);color:var(--win)} .chip.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)} .chip.mid{background:color-mix(in srgb,var(--tie) 15%,transparent);color:var(--tie)}
+button{font:inherit;font-size:15px;color:#fff;background:var(--accent);border:0;border-radius:6px;padding:9px 16px;cursor:pointer}
+button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--tie);outline-offset:2px}
+button:disabled{opacity:.55;cursor:progress}
+select,input,textarea{font:inherit;font-size:14px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:6px 8px}
+textarea{width:100%;min-height:62px;resize:vertical;font-size:15px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin-top:10px}
+td,th{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+th{font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tablewrap{overflow-x:auto}
+.ok{color:var(--win);font-weight:600} .no{color:var(--bad);font-weight:600} .mid{color:var(--tie);font-weight:600}
+.svgwrap{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px;margin-top:10px}
+.svgwrap svg{display:block;width:100%;height:auto}
+.svgwrap.wide svg{min-width:640px}
+code{font-family:var(--mono);font-size:.88em;background:var(--accent-dim);padding:1px 5px;border-radius:3px}
+.controls{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin:10px 0}
+.controls label{display:flex;gap:6px;align-items:center;font-size:14px;color:var(--muted)}
+.controls input[type=number]{width:84px}
+.lines{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.lines span{font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:10px;border:1px solid var(--line);color:var(--muted)}
+.lines span.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.lines span.half{background:var(--tie);border-color:var(--tie);color:#fff}
+.decision{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:12px}
+.stepper{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px;font-family:var(--mono);font-size:13px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:4px}
+.progress{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:8px}
+.progress i{display:block;height:100%;width:0;background:var(--accent);transition:width .2s linear}
+.note{border-left:3px solid var(--accent);padding:6px 12px;background:var(--accent-dim);border-radius:0 6px 6px 0;margin-top:10px}
+.note.warn{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 8%,transparent)}
+dl.words{display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:6px 16px;margin-top:10px}
+dl.words dt{font-weight:600} dl.words dd{color:var(--ink)}
+.multiples{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:10px}
+.multiples figure{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.multiples figcaption{font-size:14px;margin-bottom:4px}
+.multiples svg{display:block;width:100%;height:auto}
+footer{max-width:1060px;margin:0 auto;padding:22px 16px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+footer p+p{margin-top:6px}
+@media (max-width:640px){dl.words{grid-template-columns:1fr}td,th{padding:6px 5px;font-size:13.5px}h2{font-size:26px}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Sections">
+  <a href="#result">The result</a><a href="#try">Settle a message</a><a href="#edge">Where it breaks</a><a href="#rerun">Re-run it</a><a href="#what">What this is</a><a href="#words">Words</a><a href="#start">Start here</a><a href="#how">How it works</a><a href="#blueprint">Blueprint</a><a href="#found">What we found</a><a href="#next">Next</a><a href="#adoption">Adoption</a><a href="#paper">White paper</a><a href="#business">For business</a>
+</nav>
+<header class="hero">
+  <h1>Verified rules, decided by settling.</h1>
+  <p class="lede">A library of routing rules, each of which passed a test on customer messages it had never seen, is written into the weights of a network that makes its decision by <b>settling</b>: relaxing into its lowest-energy state, with no program stepping through instructions. The network runs on an emulated analogue memory array, with the faults a real device has: few levels, noisy writes, noisy reads, drift, dead cells. The question: does the settled array make the same decision the software makes, and where does that stop being true?</p>
+  <p class="notchip">An emulator, not a chip · no electrical energy is measured · nothing here is alive or aware</p>
+  <p class="verdictline" id="verdictline">Loading the record…</p>
+</header>
+<main>
+
+<section id="result">
+  <h2>The result</h2>
+  <p class="muted">Read live from the records this repository commits: <code>data/proof.json</code> (every possible input), <code>data/heldout.json</code> (the held-out messages, read once after the code was frozen by hash), <code>data/timing.json</code>. Two readings of every settle are shown: the reading sealed before any code, and a stricter one added after the dev run and before the held-out read (<a href="AMENDMENT.md">AMENDMENT.md</a>).</p>
+  <div class="cards" id="resultcards"></div>
+  <h3>Every sealed claim, as judged</h3>
+  <div class="tablewrap"><table id="claimtable"><thead><tr><th>Claim</th><th>What it says</th><th>Bar</th><th>Sealed reading</th><th>Sticky reading</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="try">
+  <h2>Settle a message</h2>
+  <p>Type a customer message. The page finds which of the library's words it holds, drives those lines of the array, and lets the array settle. Then it asks the library's own software router the same question and puts both answers side by side. Change the device and settle again.</p>
+  <label for="msg" class="small muted">A message to a bank</label>
+  <textarea id="msg">My visa card is not working with apple pay</textarea>
+  <div class="controls">
+    <label>Device <select id="preset"><option value="ideal">ideal (exact)</option><option value="assumed">the assumed device</option><option value="custom">custom</option></select></label>
+    <label>Levels (bits) <input id="d-bits" type="number" min="0" max="16" step="1" value="0" title="0 means exact"></label>
+    <label>Write noise % <input id="d-write" type="number" min="0" max="100" step="0.5" value="0"></label>
+    <label>Read noise % <input id="d-read" type="number" min="0" max="100" step="0.5" value="0"></label>
+    <label>Drift <select id="d-t"><option value="1">none</option><option value="60">1 minute</option><option value="3600">1 hour</option><option value="86400">1 day</option><option value="604800">1 week</option><option value="2592000">30 days</option><option value="31536000">1 year</option><option value="315360000">10 years</option></select></label>
+    <label><input id="d-comp" type="checkbox"> compensated</label>
+    <label>Stuck at 0 % <input id="d-p0" type="number" min="0" max="100" step="0.01" value="0"></label>
+    <label>Stuck on % <input id="d-p1" type="number" min="0" max="100" step="0.01" value="0"></label>
+    <label>Chip number <input id="d-chip" type="number" min="0" max="999" step="1" value="0"></label>
+  </div>
+  <div class="controls">
+    <label>Fault one input line <select id="glitch-line"><option value="">no fault</option></select></label>
+    <label>at <select id="glitch-level"><option value="0.5">half level</option><option value="2">twice the rail</option></select></label>
+    <button id="settle">Settle it</button>
+  </div>
+  <p class="small muted">The library reads these words (lit = in your message):</p>
+  <div class="lines" id="lines"></div>
+  <div class="decision" id="decision"></div>
+  <div class="stepper"><button class="ghost" id="step-prev" aria-label="Previous read">◀</button><span id="stepnow">read –</span><button class="ghost" id="step-next" aria-label="Next read">▶</button><span id="energy" class="muted"></span></div>
+  <div class="svgwrap wide" id="arraywrap" aria-label="The array's units at this read"></div>
+  <div class="legend"><span><i style="background:var(--h)"></i>a pattern unit lit ("it fired")</span><span><i style="background:var(--g)"></i>a first-pattern unit lit ("it fired first")</span><span><i style="background:var(--off)"></i>off</span><span><i style="background:var(--tie)"></i>did not resolve on this read</span></div>
+</section>
+
+<section id="edge">
+  <h2>Where it breaks</h2>
+  <p>Each knob of the device turned up on its own, every other knob exact, five chips at each point, every held-out message. Each bar shows the worst chip: the share of decisions that matched the router, that the array refused, and that settled to a <b>wrong</b> answer. Refusing is the safe way to fail; a wrong settled answer is the dangerous one.</p>
+  <div class="controls"><label>Reading <select id="edge-reading"><option value="sealed">sealed</option><option value="sticky">sticky (amendment 1)</option></select></label></div>
+  <div class="legend"><span><i style="background:var(--win)"></i>matched</span><span><i style="background:var(--tie)"></i>refused</span><span><i style="background:var(--bad)"></i>settled wrong</span></div>
+  <div class="multiples" id="multiples"></div>
+  <div class="tablewrap"><table id="edgetable"><thead><tr><th>Knob</th><th>Holds up to</th><th>First breaks at</th><th>In plain terms</th><th>When it fails, it…</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="rerun">
+  <h2>Re-run it in your browser</h2>
+  <p>Nothing on this page has to be taken on trust. The held-out record is re-computed here from its committed inputs, with the same code, and its SHA-256 compared with the committed file. The second button settles every possible input to the library on the exact device and compares each with the router.</p>
+  <div class="controls"><button id="rerun-held">Re-run the held-out record</button><button class="ghost" id="rerun-all">Check every possible input</button></div>
+  <div class="progress" aria-hidden="true"><i id="rerun-bar"></i></div>
+  <p id="rerun-out" class="small muted" aria-live="polite">Not run yet.</p>
+</section>
+
+<section id="what">
+  <h2>What this is, and what it is not</h2>
+  <div class="cards">
+    <div class="card"><div class="k">It is</div><p>The first step of Simon's plan for <b>the Living Crystal</b>: a material whose arrangement is the program, which computes by settling, refuses what does not fit, and remembers as shape. This step takes a library of rules the estate has already proven on unseen data, writes them into a settling network, and checks that the settled network decides exactly what the software decides.</p></div>
+    <div class="card"><div class="k">It is not a chip</div><p>There is no neuromorphic or memristor hardware in this build. Every device number comes from an <b>emulator</b> of an analogue crossbar, written to model the faults real devices have. A run on real silicon is the next step; it is named below and not done.</p></div>
+    <div class="card"><div class="k">No electrical energy figure</div><p>The network's "energy" is a number the settle lowers, in Hopfield's sense, not electricity. Nothing here measures joules or watts. Speed is stated only as measured, on the machine that ran it.</p></div>
+    <div class="card"><div class="k">Not alive, not aware</div><p>The plan's summit, a lattice whose settling models its own settling, is a direction. Everything past this step (grown or annealed materials, seeded copies, other geometries) is <b>parked</b>: not built here and not claimed.</p></div>
+    <div class="card"><div class="k">Not a better router</div><p>The cast makes the library's decisions, no more and no fewer. Whether those decisions are right is the library's own claim, measured on its own page.</p></div>
+  </div>
+</section>
+
+<section id="words">
+  <h2>Words on this page</h2>
+  <dl class="words">
+    <dt>Verified pattern</dt><dd>A rule of the form "when these one or two words are in the message, send it to this team", kept only after it was right on a batch of messages it had never seen and again on a batch never used before. From the estate's pattern library (library three, routing).</dd>
+    <dt>The router</dt><dd>The library's own software: it sends a message to the team named by the first kept pattern, in library order, whose words are all present, and names every other team a firing pattern points to (a conflict).</dd>
+    <dt>Settling</dt><dd>Every unit looks at the weighted sum of its inputs and switches on or off; repeat until nothing changes. The final state is the answer. There is no instruction pointer: the weights are the program.</dd>
+    <dt>Energy</dt><dd>A single number for a state of the network, which every change made by the settle lowers here. It is a property of the arithmetic, not a power bill.</dd>
+    <dt>Crossbar</dt><dd>A grid of memory devices. Voltages on the rows, currents summed down the columns: one read gives every unit its input at once. Each weight is held as the conductance of a pair of devices (one for plus, one for minus).</dd>
+    <dt>Dead band</dt><dd>A column's sense amplifier only commits when the current is clearly positive or clearly negative. In between it does not resolve and holds its last answer. An array with any unresolved column has not settled.</dd>
+    <dt>Refused</dt><dd>The array did not settle within its step limit, or (on a damaged array) settled with two teams lit. A refusal hands the message to a person: the safe failure.</dd>
+    <dt>Settled wrong</dt><dd>The array settled cleanly to a decision the router would not make: the dangerous failure, because nothing flags it.</dd>
+    <dt>Sealed / sticky reading</dt><dd>Two ways to read the same settle. Sealed: refused only when it does not settle. Sticky (added before the held-out read): also refused when any column failed to resolve on any read along the way, as if each column had a latch that remembers it once wavered.</dd>
+    <dt>Levels, write noise, read noise</dt><dd>A device holds only a few distinct conductances; programming lands near, not on, the target; every read adds a little noise of its own.</dd>
+    <dt>Drift</dt><dd>Programmed conductances sag over time, and not all by the same amount. "Compensated" means the reader corrects for the average sag; it cannot correct for the differences between devices.</dd>
+    <dt>Stuck cells</dt><dd>Devices that are dead (stuck at zero) or shorted (stuck fully on) and ignore programming.</dd>
+    <dt>Held-out</dt><dd>Messages the network was never developed on, read once, after the code was frozen by its hash.</dd>
+  </dl>
+</section>
+
+<section id="start">
+  <h2>Start here</h2>
+  <ol>
+    <li>Read the verdict line at the top and the cards under <a href="#result">The result</a>: what held and what failed, in both readings.</li>
+    <li>Go to <a href="#try">Settle a message</a>, keep the device on <b>ideal</b>, press <b>Settle it</b>, and step through the reads with ◀ ▶: watch the pattern units light, then the first-pattern unit, then nothing change.</li>
+    <li>Switch the device to <b>the assumed device</b>, try a few chip numbers, and see when the array refuses or settles wrong. Fault one input line at half level and watch it refuse.</li>
+    <li>Open <a href="#edge">Where it breaks</a> to see how far each fault can go before the decisions stop matching, and whether it fails safe.</li>
+    <li>Press <b>Re-run the held-out record</b> in <a href="#rerun">Re-run it</a>: your browser recomputes the record and checks its hash.</li>
+    <li>For the build, read <a href="#how">How it works</a> and <a href="#blueprint">Blueprint</a>; for the case, <a href="#business">For business</a>.</li>
+  </ol>
+</section>
+
+<section id="how">
+  <h2>How it works</h2>
+  <p>Four steps, then a real held-out message traced through them.</p>
+  <div class="svgwrap wide" id="howsvg"></div>
+  <ol>
+    <li><b>The library.</b> The routing library's kept patterns, copied byte for byte from the pattern-libraries repository at a pinned commit. Each names one or two words and one team.</li>
+    <li><b>The cast.</b> Each pattern becomes two units. Its <i>pattern unit</i> gets a strong positive weight from each of its words and a negative bias, so it can only switch on when all its words are present. Its <i>first-pattern unit</i> is driven by its own pattern unit and held down by the pattern unit of every earlier pattern that names a different team, so only the first firing pattern's team can light. First-pattern units of different teams hold each other down. Every weight is the same both ways, which is what gives the network an energy that the settle lowers.</li>
+    <li><b>The array.</b> Every weight is written into a pair of devices of an emulated crossbar: one row per input word, two bias rows, one row per unit; one column per unit. The emulator models few levels, write noise, stuck cells, drift and read noise.</li>
+    <li><b>The settle.</b> All units start off. Each step is one read of the whole array: every column's current is sensed at once, and each unit switches on, off, or (inside the dead band) holds. When every column has resolved and nothing changed, the array has settled; the team of the lit first-pattern unit is the decision, and the other teams of lit pattern units are the conflicts. If it has not settled within the step limit, it refuses.</li>
+  </ol>
+  <h3>A held-out message, traced</h3>
+  <p id="tracetext" class="muted">Loading…</p>
+  <div class="tablewrap"><table id="tracetable"><thead><tr><th>Read</th><th>Lit pattern units</th><th>Lit first-pattern units</th><th>Energy</th><th>Changed</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section id="blueprint">
+  <h2>Blueprint</h2>
+  <p>Organ by organ. Every kernel is pure (no clock, disk or network), and every kernel's tests were attacked by the mutation gate <b>witness v0.6</b>: each operator flipped in turn, and the tests must catch every one.</p>
+  <div class="tablewrap"><table id="blueprinttable"><thead><tr><th>Organ</th><th>What it does</th><th>Mutation gate</th></tr></thead><tbody></tbody></table></div>
+  <h3>The order things happened in</h3>
+  <ol>
+    <li><b>Seal 1</b> (<a href="CLAIMS.md">CLAIMS.md</a>): every claim and bar, the cast, the device model, the assumed device, the sweep grid, the seeds and both sets, before any code.</li>
+    <li>The kernels, their tests, the mutation gate; the check of every possible input (<code>data/proof.json</code>).</li>
+    <li>The dev run on the library's own seed messages (<code>data/dev.json</code>).</li>
+    <li><b>Amendment 1</b> (<a href="AMENDMENT.md">AMENDMENT.md</a>): the sticky reading added beside the sealed one, every bar unchanged.</li>
+    <li><b>Seal 2</b> (<a href="SEAL2.md">SEAL2.md</a>): every file of code that reads the held-out set, frozen by SHA-256.</li>
+    <li>The held-out read, once (<code>data/heldout.json</code>); GitHub's runner re-derives every record byte for byte on every push.</li>
+  </ol>
+</section>
+
+<section id="found">
+  <h2>What we found</h2>
+  <div id="findings"></div>
+</section>
+
+<section id="next">
+  <h2>Next: a real chip</h2>
+  <p>Named here and not done. The emulator says what device a real run needs; only silicon can say whether a device meets it, and what a decision costs in electricity.</p>
+  <ol>
+    <li>A crossbar test chip or a memristor development board with per-device programming and read-back (write-verify).</li>
+    <li>Cast the same library, program it, and run the same held-out set and the same sweep on silicon, reading every column's current.</li>
+    <li>Measure energy per decision with a power meter: the first real energy figure this work would state.</li>
+    <li>Answer the faults the emulator found first: drift spread (refresh, or a code that tolerates it) and stuck-on cells (test and remap after programming).</li>
+  </ol>
+</section>
+
+<section id="adoption">
+  <h2>Adoption</h2>
+  <p>Who this step is for today, and how a team would use it.</p>
+  <div class="cards">
+    <div class="card"><div class="k">Device and chip teams</div><p>A way to put decisions you can audit onto analogue in-memory hardware, and a tolerance map that says what device quality keeps them exact: read your datasheet against <a href="#edge">Where it breaks</a>.</p></div>
+    <div class="card"><div class="k">Regulated operations</div><p>Every weight in the array traces back to a named rule with its own exam record. When an auditor asks why a message went where it went, the answer is one rule, not a model.</p></div>
+    <div class="card"><div class="k">Edge and offline products</div><p>A decision made where the data is, with no network call and no model in the loop; it refuses rather than guesses when its hardware degrades past what it can carry.</p></div>
+  </div>
+  <h3>Rolling it out</h3>
+  <ol>
+    <li>Grow and verify the rules on your own messages with the pattern library (each rule kept only after unseen data agrees).</li>
+    <li>Cast the library and run the check of every possible input: the cast must match the software on all of them before anything else.</li>
+    <li>Place your device on the edge map (levels, write and read noise, drift spread, stuck cells); keep the sticky latch on so a wavering array refuses.</li>
+    <li>Re-cast and re-check whenever the library changes. The check is a few minutes on a laptop.</li>
+  </ol>
+</section>
+
+<section id="paper">
+  <h2>White paper: verified rules on settling hardware</h2>
+  <h3>The problem</h3>
+  <p>Settling hardware (analogue arrays that compute by relaxing to a low-energy state) is fast and frugal on paper, and it is usually given trained neural networks: millions of weights nobody can read, on devices that drift and fail in ways nobody can enumerate. Two unknowns multiply. You cannot say what the network should do on a given input, and you cannot say whether the device did it.</p>
+  <h3>The approach</h3>
+  <p>Remove the first unknown. Start from a library of rules that each passed a test on data they had never seen, and compile it into a network whose every weight is a rule's word, bias or priority. Because the library reads a small, fixed set of words, the whole input space is finite: the cast can be checked against the software on every possible input, not a sample. What is left is the second unknown, the device, and that can be swept fault by fault in a faithful emulator until it breaks.</p>
+  <h3>The design choices that matter</h3>
+  <ul>
+    <li><b>Symmetric weights</b>, so the network has an energy and settles (Hopfield, 1982).</li>
+    <li><b>Wide margins:</b> every unit's field at a settled state sits half the largest weight away from its threshold.</li>
+    <li><b>A dead band</b> in every sense amplifier, so a field too close to call holds the array unsettled instead of being rounded.</li>
+    <li><b>Priority by inhibition:</b> an earlier rule of another team holds a later rule's first-pattern unit down, reproducing "first kept rule wins" with no ordering logic outside the array.</li>
+  </ul>
+  <h3>What it showed</h3>
+  <div id="paperresults"></div>
+  <h3>Limits</h3>
+  <p>One library, of routing rules with one or two words each. An emulator, not silicon; the device figures are assumptions swept across a grid, not a datasheet. No electrical energy measured. The cast reproduces the library's decisions; it inherits the library's mistakes.</p>
+  <h3>Related work</h3>
+  <p>J. J. Hopfield (1982), on networks with an energy that settle into stored states. Analogue in-memory computing with resistive and phase-change devices, which is where the device faults modelled here come from. The estate's settling ladder (settling-cell to chip-immune), whose recurring lesson this step meets again: a settle can erase the uncertainty that should have stopped it.</p>
+</section>
+
+<section id="business">
+  <h2>For business</h2>
+  <p><b>In one breath:</b> decision rules you can audit, proven to compute exactly the same on settling hardware as in software, with a map of how good the hardware must be and a fit-check that refuses rather than guesses when it is not.</p>
+  <div class="cards" id="roles"></div>
+  <h3>The case, on your own figures</h3>
+  <p class="muted small">Two lines. First, the hand-routing time the cast's correct routes take off your team, using the library's own measured share of messages routed right. Second, what it would cost to send every message to a frontier model to be routed instead, at the model maker's printed price, counting only the message itself (the least such a call could cost). Change any figure.</p>
+  <div class="controls">
+    <label>Messages a month <input id="c-msgs" type="number" min="0" step="1000" value=""></label>
+    <label>Minutes to route one by hand <input id="c-min" type="number" min="0" step="0.1" value=""></label>
+    <label>Cost of an hour <input id="c-rate" type="number" min="0" step="0.5" value=""></label>
+    <label>Model <select id="c-model"></select></label>
+  </div>
+  <div class="cards" id="casecards"></div>
+  <p class="small muted" id="casenote"></p>
+  <h3>Security and data protection</h3>
+  <ul>
+    <li>The decision is made on the device, from which words a message holds; no message leaves it and no model is called.</li>
+    <li>Every weight traces to a named rule and its exam record, so the decision path is inspectable end to end.</li>
+    <li>A wavering or faulty array refuses (with the sticky latch on) and hands the message to a person. Stuck-on cells are the exception the record names: they can produce a confident wrong answer, so test and remap after programming.</li>
+    <li>Over-driven input lines can forge a two-word rule; the settle does not catch this, so input drivers must clip at the rail.</li>
+    <li>UK GDPR: the rules read words, not identities, and run where the data already is. Your data protection officer still signs off the deployment.</li>
+  </ul>
+  <h3>Deployment and roll-out</h3>
+  <p>This step runs today in an emulator and in this page, with no install. On hardware: cast, program with write-verify, check every input, deploy with the sticky latch, re-check on every library change. A real-chip pilot is the next step named above.</p>
+  <h3>Support and ownership</h3>
+  <p>Supplied by <a href="https://www.ai-nativesolutions.com">AI Native Solutions</a>; start through the public site. Support, service levels, warranty and liability are agreed per deployment, in each deployment's agreement. The code is MIT licensed: you own your copy, there is no licence fee, and it keeps running without us.</p>
+  <h3>Risks, answered straight</h3>
+  <div class="tablewrap"><table id="risks"><thead><tr><th>Risk</th><th>The answer</th></tr></thead><tbody></tbody></table></div>
+  <h3>The case for the board</h3>
+  <div id="board"></div>
+</section>
+
+</main>
+<footer>
+  <p>Verified patterns and router: <a href="https://github.com/sjgant80-hub/pattern-libraries">pattern-libraries</a> (MIT), copied byte for byte. Messages: Banking77 and NLU++, PolyAI, CC BY 4.0 (only which of the library's words each message holds is committed). The energy network follows J. J. Hopfield (1982), PNAS 79(8). The settling ladder this builds on: <a href="https://sjgant80-hub.github.io/geometric-ladder/">the geometric ladder</a>, from settling-cell to chip-immune.</p>
+  <p>Code and records: <a href="https://github.com/sjgant80-hub/living-crystal">github.com/sjgant80-hub/living-crystal</a> · <a href="CLAIMS.md">CLAIMS.md</a> · <a href="AMENDMENT.md">AMENDMENT.md</a> · <a href="SEAL2.md">SEAL2.md</a> · <span id="ciline">CI: see the repository's Actions tab.</span></p>
+  <p>Powered by the Konomi architecture, created by Thomas Frumkin. Built by Kar for AI Native Solutions. MIT licence, Simon Gant.</p>
+</footer>
+<script type="module" src="app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+name: proof
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - name: the kernels, the case, the held-out text builder and the page
+        run: node --test test/cast.test.mjs test/crossbar.test.mjs test/record.test.mjs test/case.test.mjs test/held.test.mjs test/page.test.mjs
+      - name: the messages, fetched from PolyAI at the pinned commit and checked against the pinned manifest
+        run: node vendor/pattern-libraries/tools/polyai_fetch.mjs /tmp/polyai --check d014c397bfa65560859b7856a4f855fbd738f6e49c71640b7219e3ab5f9549e5 > /tmp/polyai.txt && tail -1 /tmp/polyai.txt
+      - name: LC1, every possible input, re-derived byte for byte
+        run: node tools/proof.mjs --check
+      - name: the dev run, re-derived byte for byte from the texts
+        run: node tools/dev.mjs --polyai /tmp/polyai --check
+      - name: the held-out record, re-derived byte for byte from the texts, and again from its committed inputs alone
+        run: |
+          if [ -f data/heldout.json ]; then
+            node tools/heldout.mjs --polyai /tmp/polyai --check
+            node tools/heldout.mjs --inputs
+          else
+            echo "no held-out record yet (seal 2 commit): nothing to re-derive"
+          fi
+      # ⚑ Pinned. An unpinned gate is a gate somebody else can change.
+      - name: witness v0.6 — try to break each kernel, then READ the verdict (must be CLEAN, nothing baselined)
+        run: |
+          git clone --depth 1 --branch v0.6 https://github.com/sjgant80-hub/witness.git /tmp/witness
+          TESTS="node --test test/cast.test.mjs test/crossbar.test.mjs test/record.test.mjs test/case.test.mjs test/held.test.mjs"
+          for k in cast crossbar record case held; do
+            node /tmp/witness/witness.mjs mutate "src/$k.mjs" --timeout 120000 --cap 2000 --test "$TESTS" > "verdict-$k.txt" 2>&1 || true
+            tail -2 "verdict-$k.txt"
+            grep -q '"clean": true' "verdict-$k.txt" || { echo "::error::mutants survived in src/$k.mjs"; cat "verdict-$k.txt"; exit 1; }
+            node tools/gate-receipt.mjs "$k" "src/$k.mjs" "verdict-$k.txt" --check
+          done

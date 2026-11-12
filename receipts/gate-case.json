@@ -1,0 +1,9 @@
+{
+ "kernel": "src/case.mjs",
+ "witness": "v0.6",
+ "total": 23,
+ "killed": 23,
+ "survived": 0,
+ "ignored": 0,
+ "clean": true
+}

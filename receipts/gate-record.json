@@ -1,0 +1,9 @@
+{
+ "kernel": "src/record.mjs",
+ "witness": "v0.6",
+ "total": 71,
+ "killed": 71,
+ "survived": 0,
+ "ignored": 0,
+ "clean": true
+}

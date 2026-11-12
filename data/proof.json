@@ -1,0 +1,27 @@
+{
+ "claim": "LC1",
+ "what": "every subset of the library's 21 words, the router against the cast settled on the ideal device",
+ "library": {
+  "patterns": 20,
+  "words": 21,
+  "routes": 16,
+  "devices": 5040
+ },
+ "inputs": 2097152,
+ "match": 2097152,
+ "mismatches": 0,
+ "refusals": 0,
+ "routed": 2097140,
+ "conflicts": 2096908,
+ "reads": [
+  0,
+  12,
+  0,
+  2097140
+ ],
+ "wavered": 0,
+ "firstMismatch": null,
+ "readsLabel": "how many settles took 0, 1, 2, 3 reads (no settle may take more than 3 here)",
+ "routerDecisions": "aa325e84db4e6738e757fd4b2177a532a4d74fc2f81c9b4d290d2c7d04cbe023",
+ "verdict": "held"
+}
