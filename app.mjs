@@ -28,13 +28,13 @@ const get = async (p) => { const r = await fetch(p, { cache: 'no-cache' }); if (
 const opt = async (p) => { try { return await get(p); } catch { return null; } };
 
 const KNOB = {
-  bits: { name: 'Conductance levels', label: (v) => v + ' bits', plain: (a, b) => (a !== null ? 2 ** a + ' levels per device hold it' : 'no grid value holds') + (b !== null ? '; ' + 2 ** b + ' do not' : '') },
+  bits: { name: 'Conductance levels', label: (v) => v + (v === 1 ? ' bit' : ' bits'), plain: (a, b) => (a !== null ? 2 ** a + ' levels per device hold it' : 'no grid value holds') + (b !== null ? '; ' + 2 ** b + ' levels do not' : '') },
   write: { name: 'Write noise', label: (v) => +(v * 100).toFixed(2) + '%', plain: (a, b) => 'programming error up to ' + (a !== null ? +(a * 100).toFixed(2) + '%' : 'none') + ' of a device\'s full range holds' + (b !== null ? '; ' + +(b * 100).toFixed(2) + '% does not' : '') },
   read: { name: 'Read noise', label: (v) => +(v * 100).toFixed(2) + '%', plain: (a, b) => 'noise up to ' + (a !== null ? +(a * 100).toFixed(2) + '%' : 'none') + ' of each device\'s own current, on every read, holds' + (b !== null ? '; ' + +(b * 100).toFixed(2) + '% does not' : '') },
   'drift-raw': { name: 'Drift, uncorrected', label: (v) => TIME[v] || v + ' s', plain: (a, b) => 'the sag after ' + (a !== null ? TIME[a] : 'no time') + ' holds' + (b !== null ? '; after ' + TIME[b] + ' it does not' : '') },
   'drift-comp': { name: 'Drift, compensated', label: (v) => TIME[v] || v + ' s', plain: (a, b) => 'devices drifting apart by about ' + (a !== null ? (100 * K.spreadAt(a)).toFixed(0) + '%' : '0%') + ' (one standard deviation) hold' + (b !== null ? '; about ' + (100 * K.spreadAt(b)).toFixed(0) + '% does not' : '') },
   'stuck-0': { name: 'Dead cells (stuck at zero)', label: (v) => +(v * 100).toFixed(2) + '%', plain: (a, b) => (a !== null ? +(a * 100).toFixed(2) + '% of devices dead holds' : 'no grid value holds') + (b !== null ? '; ' + +(b * 100).toFixed(2) + '% does not' : '') },
-  'stuck-1': { name: 'Shorted cells (stuck on)', label: (v) => +(v * 100).toFixed(2) + '%', plain: (a, b) => (a !== null ? +(a * 100).toFixed(2) + '% of devices shorted holds' : 'even ' + +(b * 100).toFixed(2) + '% of devices shorted on breaks a chip') + (a !== null && b !== null ? '; ' + +(b * 100).toFixed(2) + '% does not' : '') },
+  'stuck-1': { name: 'Shorted cells (stuck on)', label: (v) => +(v * 100).toFixed(2) + '%', plain: (a, b) => (a !== null ? +(a * 100).toFixed(2) + '% of devices shorted holds' : 'Even ' + +(b * 100).toFixed(2) + '% of devices shorted on breaks a chip') + (a !== null && b !== null ? '; ' + +(b * 100).toFixed(2) + '% does not' : '') },
 };
 const TIME = { 60: '1 minute', 3600: '1 hour', 86400: '1 day', 604800: '1 week', 2592000: '30 days', 31536000: '1 year', 315360000: '10 years' };
 const SHORT = { 60: '1m', 3600: '1h', 86400: '1d', 604800: '1w', 2592000: '30d', 31536000: '1y', 315360000: '10y' };
@@ -151,7 +151,7 @@ function settleNow() {
   $('decision').replaceChildren(
     el('div', { class: 'card' }, el('div', { class: 'k' }, 'The array decides'), el('p', {}, el('b', {}, show(sealed))), el('p', { class: 'small muted' }, 'Sticky reading: ' + show(sticky)), el('p', { class: 'small muted' }, (res.settled ? 'Settled after ' + res.reads + ' read' + (res.reads === 1 ? '' : 's') : 'Not settled after ' + res.reads + ' reads') + '; ' + res.wavered + ' column read' + (res.wavered === 1 ? '' : 's') + ' did not resolve.')),
     el('div', { class: 'card' }, el('div', { class: 'k' }, 'The library\'s router decides'), el('p', {}, el('b', {}, show(want))), el('p', { class: 'small muted' }, 'The library\'s own code on your message text, not the array.')),
-    el('div', { class: 'card' }, el('div', { class: 'k' }, 'Same decision?'), el('p', {}, chip(ok ? 'held' : sealed.refused ? 'refused' : 'failed')), el('p', { class: 'small muted' }, ok ? 'The settled array and the software agree.' : sealed.refused ? 'The array refused: the message would go to a person.' : 'The array settled to a different answer: the dangerous failure.')),
+    el('div', { class: 'card' }, el('div', { class: 'k' }, 'Same decision?'), el('p', {}, el('span', { class: 'chip ' + (ok ? 'win' : sealed.refused ? 'mid' : 'bad') }, ok ? 'the same' : sealed.refused ? 'refused' : 'different')), el('p', { class: 'small muted' }, ok ? 'The settled array and the software agree.' : sealed.refused ? 'The array refused: the message would go to a person.' : 'The array settled to a different answer: the dangerous failure.')),
   );
   frames = res.trace; frame = frames.length - 1;
   drawFrame();
@@ -171,7 +171,7 @@ function drawFrame() {
       const on = f.s[u] === 1, undecided = Math.abs(f.f[u]) <= C.TAU;
       const r = sv('rect', { x, y: top + row * rh, width: cw - 6, height: rh - 6, rx: 4, style: 'fill:' + (on ? col : 'var(--off)') + (undecided ? ';stroke:var(--tie);stroke-width:3' : '') });
       r.append(sv('title', {}, (row === 0 ? 'fired: ' : 'first: ') + p.when.join(' + ') + ' → ' + T.say(p.then) + ' · field ' + f.f[u].toFixed(2)));
-      svg.append(r, sv('text', { x: x + (cw - 6) / 2, y: top + row * rh + 18, 'font-size': 9.5, 'text-anchor': 'middle', style: 'fill:' + (on ? '#fff' : 'var(--muted)') }, (f.f[u] > 0 ? '+' : '') + f.f[u].toFixed(1)));
+      svg.append(r, sv('text', { x: x + (cw - 6) / 2, y: top + row * rh + 18, 'font-size': 9.5, 'text-anchor': 'middle', style: 'fill:' + (on ? 'var(--bg)' : 'var(--muted)') }, (f.f[u] > 0 ? '+' : '') + f.f[u].toFixed(1)));
     }
   });
   $('arraywrap').replaceChildren(svg);
@@ -199,12 +199,12 @@ function edgeDraw() {
       svg.append(sv('text', { x: x + (bw - 6) / 2, y: h - 1, 'font-size': 9, 'text-anchor': 'middle', style: 'fill:' + (all ? 'var(--win)' : 'var(--bad)') }, all ? '✓' : '✗'));
       svg.lastChild.append(sv('title', {}, meta.label(p.value) + ': worst chip ' + worst.match + ' of ' + worst.n + ' matched, ' + ref + ' refused, ' + worst.wrong + ' settled wrong'));
     });
-    return el('figure', {}, el('figcaption', {}, el('b', {}, meta.name), ' · ✓ every chip matched on at least 99.9%'), svg);
+    return el('figure', {}, el('figcaption', {}, el('b', {}, meta.name)), svg);
   });
   $('multiples').replaceChildren(...figs);
   $('edgetable').tBodies[0].replaceChildren(...v.LC5.map((e, i) => {
     const meta = KNOB[e.knob], l = v.LC6[i];
-    const fails = l.verdict === 'undecided' ? 'never failed on this grid' : (l.verdict === 'held' ? 'refuses: ' : 'often settles wrong: ') + fmt(l.refused) + ' of ' + fmt(l.nonmatch) + ' non-matches refused';
+    const fails = l.verdict === 'undecided' ? 'never failed on this grid' : (l.verdict === 'held' ? 'fails safe: ' : 'often settles wrong: only ') + fmt(l.refused) + ' of ' + fmt(l.nonmatch) + ' non-matching decisions were refusals';
     return el('tr', {}, el('td', {}, meta.name), el('td', { class: 'num' }, e.last === null ? 'nothing on the grid' : meta.label(e.last)), el('td', { class: 'num' }, e.first === null ? 'beyond the grid' : meta.label(e.first)), el('td', {}, meta.plain(e.last, e.first)), el('td', {}, chip(l.verdict), ' ', fails));
   }));
 }

@@ -75,7 +75,7 @@ dl.words dt{font-weight:600} dl.words dd{color:var(--ink)}
 .multiples svg{display:block;width:100%;height:auto}
 footer{max-width:1060px;margin:0 auto;padding:22px 16px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
 footer p+p{margin-top:6px}
-@media (max-width:640px){dl.words{grid-template-columns:1fr}td,th{padding:6px 5px;font-size:13.5px}h2{font-size:26px}}
+@media (max-width:640px){nav.top{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap}dl.words{grid-template-columns:1fr}td,th{padding:6px 5px;font-size:13.5px}h2{font-size:26px}}
 </style>
 </head>
 <body>
@@ -131,7 +131,7 @@ footer p+p{margin-top:6px}
   <h2>Where it breaks</h2>
   <p>Each knob of the device turned up on its own, every other knob exact, five chips at each point, every held-out message. Each bar shows the worst chip: the share of decisions that matched the router, that the array refused, and that settled to a <b>wrong</b> answer. Refusing is the safe way to fail; a wrong settled answer is the dangerous one.</p>
   <div class="controls"><label>Reading <select id="edge-reading"><option value="sealed">sealed</option><option value="sticky">sticky (amendment 1)</option></select></label></div>
-  <div class="legend"><span><i style="background:var(--win)"></i>matched</span><span><i style="background:var(--tie)"></i>refused</span><span><i style="background:var(--bad)"></i>settled wrong</span></div>
+  <div class="legend"><span><i style="background:var(--win)"></i>matched</span><span><i style="background:var(--tie)"></i>refused</span><span><i style="background:var(--bad)"></i>settled wrong</span><span>✓ every chip met the sealed bar of LC5 · ✗ at least one chip did not</span></div>
   <div class="multiples" id="multiples"></div>
   <div class="tablewrap"><table id="edgetable"><thead><tr><th>Knob</th><th>Holds up to</th><th>First breaks at</th><th>In plain terms</th><th>When it fails, it…</th></tr></thead><tbody></tbody></table></div>
 </section>

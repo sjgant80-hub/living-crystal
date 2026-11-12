@@ -22,7 +22,7 @@ test('every section a stranger needs is on the page, and the nav reaches each', 
 
 test('no measured number is typed into the HTML: every figure comes from a record', () => {
   // names and citations, and the device controls (their labels are settings, not results), are taken out first
-  const names = /sjgant80-hub|SEAL2|Seal [12]\b|Amendment 1\b|Banking77|SHA-256|v0\.6|CC BY 4\.0|\(1982\)|Hopfield, 1982|PNAS 79\(8\)/g;
+  const names = /\bLC\d+\b|sjgant80-hub|SEAL2|Seal [12]\b|Amendment 1\b|Banking77|SHA-256|v0\.6|CC BY 4\.0|\(1982\)|Hopfield, 1982|PNAS 79\(8\)/g;
   const text = html.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<label[\s\S]*?<\/label>/g, ' ')
     .replace(/<[^>]+>/g, ' ').replace(names, ' ');
   assert.deepEqual([...text.matchAll(/\d+/g)].map((m) => text.slice(m.index - 20, m.index + 10)), []);
