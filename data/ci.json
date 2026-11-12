@@ -1,0 +1,6 @@
+{
+ "run": 43213873452,
+ "url": "https://github.com/sjgant80-hub/living-crystal/actions/runs/43213873452",
+ "commit": "c3eac8326d8a493d57e15ba21e35c10de0a35451",
+ "what": "the commit that holds the held-out read: every test, LC1 on every input, dev and the held-out record re-derived byte for byte from the PolyAI texts (and the held-out record again from its committed inputs alone), witness v0.6 clean on all five kernels with every receipt re-derived"
+}

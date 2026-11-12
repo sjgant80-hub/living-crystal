@@ -49,7 +49,7 @@ async function boot() {
   const ci = await opt('data/ci.json');
   const lib = state.library, net = C.cast(lib);
   S = { proof, held, inputs, timing, lib, net, prices, dev, gates, ci, router: R.routerOf(lib, net), masks: inputs.masks.split(',').map((s) => parseInt(s, 36)) };
-  for (const f of [verdictLine, resultCards, claimTable, tryInit, edgeInit, rerunInit, traceInit, howSvg, blueprint, findings, business, ciLine]) {
+  for (const f of [verdictLine, resultCards, claimTable, tryInit, edgeInit, rerunInit, traceInit, howSvg, blueprint, findings, business, needs, driftModel, ciLine]) {
     try { f(); } catch (e) { console.error(f.name, e); }
   }
 }
@@ -77,12 +77,12 @@ function resultCards() {
   const card = (key, big, vs, v) => el('div', { class: 'card' }, el('div', { class: 'k' }, key), el('div', { class: 'big' }, big), el('div', { class: 'vs' }, vs), v ? el('div', {}, chip(v)) : null);
   const t = S.timing;
   $('resultcards').replaceChildren(
-    card('Every possible input · exact device', fmt(p.match) + ' of ' + fmt(p.inputs), 'decided exactly as the router decides; ' + fmt(p.refusals) + ' refused; every settle in 3 reads or fewer', p.verdict),
-    card('Held-out messages · exact device', fmt(id.match) + ' of ' + fmt(id.n), fmt(S.held.banking77) + ' Banking77 and ' + fmt(S.held.nlupp) + ' NLU++ messages, read once after the code was frozen', s.LC2),
-    card('The assumed device · 10 chips', s.LC3chips + ' of 10 chips', 'matched on at least 99.9% of held-out messages (sealed reading; sticky: ' + k.LC3chips + ' of 10). A day of drift, compensated; 4 bits; 2% write and read noise.', s.LC3),
-    card('Settled wrong on the assumed device', fmt(pp.wrong) + ' of ' + fmt(pp.n), pct(pp.wrong, pp.n, 3) + ' of decisions, sealed reading; sticky: ' + fmt(pk.wrong) + ' (' + pct(pk.wrong, pk.n, 3) + '). The bar was 0.01%.', s.LC4),
+    card('Every possible input · exact device', fmt(p.match) + ' of ' + fmt(p.inputs), 'every combination of the ' + S.net.words.length + ' words the library reads (the router reads nothing else, so this is its whole input space), each decided exactly as the router decides; ' + fmt(p.refusals) + ' refused; every settle in 3 reads or fewer', p.verdict),
+    card('Held-out messages · exact device', fmt(id.match) + ' of ' + fmt(id.n), 'every Banking77 message outside the library\'s seed slice (' + fmt(S.held.banking77) + ', in the library\'s own exam order) and every NLU++ message (' + fmt(S.held.nlupp) + '): none chosen by hand; read once, after the code was frozen', s.LC2),
+    card('The assumed device · 10 chips', s.LC3chips + ' of 10 chips', 'matched on at least 99.9% of held-out messages (sealed reading; sticky: ' + k.LC3chips + ' of 10). Each chip programmed from its own sealed seed and run on all ' + fmt(S.held.n) + ' messages: a day of drift, compensated; 4 bits; 2% write and read noise.', s.LC3),
+    card('Settled wrong on the assumed device', fmt(pp.wrong) + ' of ' + fmt(pp.n), pct(pp.wrong, pp.n, 3) + ' of decisions, sealed reading; sticky: ' + fmt(pk.wrong) + ' (' + pct(pk.wrong, pk.n, 3) + '). The bar was 0.01%. Why: devices drift apart (see What we found).', s.LC4),
     card('A glitched input line · exact device', fmt(gl.sealed.neither) + ' misread', 'of ' + fmt(gl.sealed.n) + ' half-level glitches; of the ' + fmt(gl.sealed.ambiguous) + ' that could change the decision, ' + pct(gl.sealed.ambiguousRefused, gl.sealed.ambiguous, 1) + ' refused (sticky: ' + pct(gl.sticky.ambiguousRefused, gl.sticky.ambiguous, 1) + ')', s.LC7),
-    card('A faulty front end · exact device', pct(fe.sealed.refused, fe.sealed.n, 1) + ' refused', fmt(fe.sealed.other) + ' of ' + fmt(fe.sealed.n) + ' random drives settled to a decision other than their rounding (sticky: ' + fmt(fe.sticky.other) + '). The bar was 0.', s.LC8),
+    card('A faulty front end · exact device', pct(fe.sealed.refused, fe.sealed.n, 1) + ' refused', 'each of ' + fmt(fe.sealed.n) + ' drives set every input line to a seeded random level between off and on; ' + fmt(fe.sealed.other) + ' of ' + fmt(fe.sealed.n) + ' random drives settled to a decision other than their rounding (sticky: ' + fmt(fe.sticky.other) + '). The bar was 0.', s.LC8),
     card('Over-drive · the known gap', fmt(od.neither) + ' of ' + fmt(od.n), 'lines driven at twice the rail that forged a decision neither reading gives. Not caught by the settle: input drivers must clip.', null),
     card('Speed, as measured', t ? (t.readsPerDecision.mean).toFixed(2) + ' reads per decision' : '–', t ? 'at most ' + t.readsPerDecision.max + ' reads; the JavaScript emulator took ' + t.microsecondsPerDecision.emulatorIdeal.toFixed(1) + ' µs a decision, the library router ' + t.microsecondsPerDecision.router.toFixed(1) + ' µs (' + t.machine + '). No electrical energy is measured.' : '', null),
   );
@@ -94,20 +94,20 @@ function claimTable() {
   const gatesClean = Object.values(S.gates).every((g) => g && g.clean === true && g.ignored === 0);
   const ci = S.ci ? 'run ' + S.ci.run + ' green' : 'see Actions';
   const rows = [
-    ['LC1', 'Every possible input, exact device: the cast decides as the router does', '0 mismatches, 0 refusals', chip(S.proof.verdict), chip(S.proof.verdict)],
-    ['LC2', 'Every held-out message, exact device; at most 3 reads; the energy falls at every change', '0 mismatches, 0 refusals', chip(s.LC2), chip(k.LC2)],
-    ['LC3', 'Held-out, the assumed device: decisions match the router', 'at least 99.9% on at least 9 of 10 chips', el('span', {}, chip(s.LC3), ' ' + s.LC3chips + ' of 10'), el('span', {}, chip(k.LC3), ' ' + k.LC3chips + ' of 10')],
-    ['LC4', 'No silent wrong answers on the assumed device', 'at most 0.01% settled wrong', chip(s.LC4), chip(k.LC4)],
-    ['LC5', 'The edge of each fault, one at a time', 'reported, no bar', el('a', { href: '#edge' }, 'seven edges'), el('a', { href: '#edge' }, 'seven edges')],
-    ['LC6', 'It fails loud: refusals, not wrong answers, for each fault', 'at least 90% of non-matches refused, per knob', knobs(s), knobs(k)],
-    ['LC7', 'A line glitched to half level is refused, not misread', '0 misread; at least half of the decisive glitches refused', chip(s.LC7), chip(k.LC7)],
-    ['LC8', 'A random front-end fault is refused, or read as its rounding', '0 other decisions; at least half refused', chip(s.LC8), chip(k.LC8)],
-    ['LC9', 'The known gap: a line over-driven to twice the rail', 'reported, no bar', fmt(s.LC9.reported) + ' of ' + fmt(s.LC9.of) + ' forged', fmt(k.LC9.reported) + ' of ' + fmt(k.LC9.of) + ' forged'],
-    ['LC10', 'Speed as measured; no electrical energy figure anywhere', 'reported; checked by a test', 'reported', 'reported'],
-    ['LC11', 'Every record re-derives byte for byte, on GitHub\'s runner and in this tab', 're-derived', ci, el('a', { href: '#rerun' }, 're-run it here')],
-    ['LC12', 'Every kernel mutation-gated clean (witness v0.6), nothing baselined; garbage never throws', 'clean', chip(gatesClean ? 'held' : 'failed'), chip(gatesClean ? 'held' : 'failed')],
+    ['LC1', 'Every possible input, exact device: the cast decides as the router does', '0 mismatches, 0 refusals', 'data/proof.json', chip(S.proof.verdict), chip(S.proof.verdict)],
+    ['LC2', 'Every held-out message, exact device; at most 3 reads; the energy falls at every change', '0 mismatches, 0 refusals', 'data/heldout.json', chip(s.LC2), chip(k.LC2)],
+    ['LC3', 'Held-out, the assumed device: decisions match the router', 'at least 99.9% on at least 9 of 10 chips', 'data/heldout.json', el('span', {}, chip(s.LC3), ' ' + s.LC3chips + ' of 10'), el('span', {}, chip(k.LC3), ' ' + k.LC3chips + ' of 10')],
+    ['LC4', 'No silent wrong answers on the assumed device', 'at most 0.01% settled wrong', 'data/heldout.json', chip(s.LC4), chip(k.LC4)],
+    ['LC5', 'The edge of each fault, one at a time', 'reported, no bar', 'data/heldout.json', el('a', { href: '#edge' }, 'seven edges'), el('a', { href: '#edge' }, 'seven edges')],
+    ['LC6', 'It fails loud: refusals, not wrong answers, for each fault', 'at least 90% of non-matches refused, per knob', 'data/heldout.json', knobs(s), knobs(k)],
+    ['LC7', 'A line glitched to half level is refused, not misread', '0 misread; at least half of the decisive glitches refused', 'data/heldout.json', chip(s.LC7), chip(k.LC7)],
+    ['LC8', 'A random front-end fault is refused, or read as its rounding', '0 other decisions; at least half refused', 'data/heldout.json', chip(s.LC8), chip(k.LC8)],
+    ['LC9', 'The known gap: a line over-driven to twice the rail', 'reported, no bar', 'data/heldout.json', fmt(s.LC9.reported) + ' of ' + fmt(s.LC9.of) + ' forged', fmt(k.LC9.reported) + ' of ' + fmt(k.LC9.of) + ' forged'],
+    ['LC10', 'Speed as measured; no electrical energy figure anywhere', 'reported; checked by a test', 'data/timing.json', 'reported', 'reported'],
+    ['LC11', 'Every record re-derives byte for byte, on GitHub\'s runner and in this tab', 're-derived', 'the CI run', ci, el('a', { href: '#rerun' }, 're-run it here')],
+    ['LC12', 'Every kernel mutation-gated clean (witness v0.6), nothing baselined; garbage never throws', 'clean', 'receipts/gate-*.json', chip(gatesClean ? 'held' : 'failed'), chip(gatesClean ? 'held' : 'failed')],
   ];
-  $('claimtable').tBodies[0].replaceChildren(...rows.map((r) => el('tr', {}, ...r.map((c, i) => el('td', i === 0 ? { class: 'num' } : {}, c)))));
+  $('claimtable').tBodies[0].replaceChildren(...rows.map((r) => el('tr', {}, ...r.map((c, i) => el('td', i === 0 ? { class: 'num' } : {}, i === 3 ? el('code', {}, c) : c)))));
 }
 
 // ── settle a message ──────────────────────────────────────────────────────────
@@ -288,7 +288,7 @@ function findings() {
     ['A modest device keeps it exact.', 'With every other fault off, every chip still matched on at least 99.9% of held-out messages down to ' + lab('bits', e.bits.last) + ' of conductance levels, with write noise up to ' + lab('write', e.write.last) + ' of full range and read noise up to ' + lab('read', e.read.last) + ' (sealed reading).'],
     ['Drift spread breaks it first.', 'On the assumed device (a day of drift, compensated) ' + s.LC3chips + ' of 10 chips held, and ' + fmt(pp.wrong) + ' of ' + fmt(pp.n) + ' decisions settled wrong (sticky: ' + fmt(pk.wrong) + '). Compensated drift held up to ' + lab('drift-comp', e['drift-comp'].last) + ' and broke at ' + lab('drift-comp', e['drift-comp'].first) + ': ' + KNOB['drift-comp'].plain(e['drift-comp'].last, e['drift-comp'].first) + '.'],
     ['Shorted cells break it at once, and silently.', KNOB['stuck-1'].plain(e['stuck-1'].last, e['stuck-1'].first) + '. Of its non-matching decisions, only ' + fmt(l6['stuck-1'].refused) + ' of ' + fmt(l6['stuck-1'].nonmatch) + ' were refusals.'],
-    ['The fit-check works on a glitched line.', 'Of ' + fmt(gl.sealed.n) + ' half-level glitches, ' + fmt(gl.sealed.neither) + ' settled to a decision neither reading of the line gives; ' + pct(gl.sealed.ambiguousRefused, gl.sealed.ambiguous, 1) + ' of the decisive ones were refused, and ' + pct(gl.sticky.ambiguousRefused, gl.sticky.ambiguous, 1) + ' with the sticky latch.'],
+    ['The fit-check works on a glitched line.', 'How it works: a sense amplifier whose field is within one unit of zero does not resolve, so the array cannot settle. How it was tested: each of the ' + S.net.words.length + ' input lines driven at half level on every held-out message. Of ' + fmt(gl.sealed.n) + ' half-level glitches, ' + fmt(gl.sealed.neither) + ' settled to a decision neither reading of the line gives; ' + pct(gl.sealed.ambiguousRefused, gl.sealed.ambiguous, 1) + ' of the decisive ones were refused, and ' + pct(gl.sticky.ambiguousRefused, gl.sticky.ambiguous, 1) + ' with the sticky latch.'],
     ['It does not round a faulty front end line by line.', fmt(fe.sealed.other) + ' of ' + fmt(fe.sealed.n) + ' random front-end drives settled to a decision other than their rounding (sticky: ' + fmt(fe.sticky.other) + '): a two-word rule adds its two lines, so two lines just above half can sum below its threshold. LC8 failed, kept.'],
     ['Over-drive is not caught.', fmt(od.neither) + ' of ' + fmt(od.n) + ' lines driven to twice the rail forged a decision neither reading gives: one over-driven word can stand in for a two-word rule. Input drivers must clip.'],
     ['The settle erased the uncertainty, again.', 'Under drift, a unit can sit undecided for a read or two and then be pushed off by a later unit\'s inhibition, so the array settles confidently on the wrong team: the ladder\'s Rung 3 lesson. The sticky latch turned read noise\'s errors into refusals (' + fmt(l6k.read.refused) + ' of ' + fmt(l6k.read.nonmatch) + ', against ' + fmt(l6.read.refused) + ' of ' + fmt(l6.read.nonmatch) + ' sealed), at the cost of refusing earlier (read-noise edge ' + lab('read', ek.read.last) + ' against ' + lab('read', e.read.last) + '). It does not catch drift or shorted cells: their wrong answers never waver.'],
@@ -301,9 +301,9 @@ function findings() {
 function business() {
   const id = S.held.ideal.sealed, s = V('sealed'), e = Object.fromEntries(s.LC5.map((x) => [x.knob, x])), m = S.held.meter;
   const roles = [
-    ['Chief executive', 'A decision engine you can prove, end to end: the rules were tested on data they never saw, and the hardware that runs them was checked against them on every possible input.'],
-    ['Finance', 'The cast routes ' + pct(m.right, m.messages, 1) + ' of messages correctly with no per-message fee; the calculator below prices that against hand-routing and against a frontier model, on your own figures.'],
-    ['Operations', 'Messages the rules cannot place, and every message a degraded array refuses, go to a person: nothing is silently dropped. Today that is most messages (the library routes ' + pct(m.routed, m.messages, 1) + ' on its meter).'],
+    ['Chief executive', 'A decision engine you can check end to end: the rules were tested on data they never saw, and an emulated array was checked against them on every possible input. Real silicon is the next step.'],
+    ['Finance', 'On the library\'s meter the cast routes ' + pct(m.right, m.messages, 1) + ' of messages correctly, with no per-message fee; the calculator below prices that against hand-routing and against a frontier model, on your own figures.'],
+    ['Operations', 'A message the rules cannot place, or that the array refuses, goes to a person. Today that is most messages: on its meter the library routes ' + pct(m.routed, m.messages, 1) + ', so ' + pct(m.messages - m.routed, m.messages, 1) + ' go to a person. A drifted or damaged array can also misroute without warning: see the risks.'],
     ['Technology', 'One library becomes ' + fmt(2 * S.net.W.length) + ' devices on a crossbar; a decision takes at most ' + id.maxReads + ' array reads. The device must hold at least ' + (e.bits.last !== null ? 2 ** e.bits.last : '–') + ' conductance levels and keep drift spread small: see the edge map.'],
     ['Security', 'Glitched inputs are refused, not misread. Over-driven inputs and shorted cells are the named gaps: clip input drivers, and test and remap cells after programming.'],
     ['Risk and compliance', 'Each weight is a named rule with an exam record; each decision names the rule that made it. The record is re-derivable by anyone, byte for byte.'],
@@ -317,15 +317,16 @@ function business() {
   caseDraw();
   const risks = [
     ['This is an emulator.', 'Yes, and every page and record says so. The edge map says what a real device must meet; a real-chip run is the named next step.'],
-    ['Devices drift apart.', 'They do, and it is the first fault that breaks this cast: ' + KNOB['drift-comp'].plain(e['drift-comp'].last, e['drift-comp'].first) + '. Plan a refresh, or a device with less spread.'],
-    ['Shorted cells.', KNOB['stuck-1'].plain(e['stuck-1'].last, e['stuck-1'].first) + ', and the answer can be confidently wrong. Test every cell after programming and remap.'],
+    ['Devices drift apart.', 'They do, and it is the first fault that breaks this cast: ' + KNOB['drift-comp'].plain(e['drift-comp'].last, e['drift-comp'].first) + '. The acceptance line: keep the spread between devices below about ' + (100 * K.spreadAt(e['drift-comp'].last)).toFixed(0) + '% (one standard deviation) between refreshes; measure it on your device.'],
+    ['Shorted cells.', KNOB['stuck-1'].plain(e['stuck-1'].last, e['stuck-1'].first) + ', and the answer can be confidently wrong. This page cannot know your device\'s rate of shorted cells: read it off the datasheet or a test of the programmed array, place it on the edge map, and remap around bad cells.'],
     ['The rules can be wrong.', 'The cast inherits the library exactly: on the library\'s meter it routed ' + fmt(m.routed) + ' of ' + fmt(m.messages) + ' messages, ' + fmt(m.right) + ' of them to the team the experts chose.'],
     ['Most messages are not routed yet.', 'True: the library is young and grows nightly; every message it cannot place goes to a person. Re-cast and re-check as it grows.'],
+    ['It is an early step.', 'Yes: a first rung, proven in emulation, not a chip you can buy today. What it gives now is the method, the proof against the software, and the device requirements; the real-chip pilot is the next step.'],
     ['Lock-in.', 'None: MIT licence, your copy, no licence fee; the record and the code are public.'],
   ];
   $('risks').tBodies[0].replaceChildren(...risks.map(([a, b]) => el('tr', {}, el('td', {}, el('b', {}, a)), el('td', {}, b))));
   $('board').replaceChildren(
-    el('p', {}, 'Every AI system asks the board to trust two things it cannot see: what the model will decide, and whether the hardware does what the model says. This work removes the first: the rules are proven on unseen data and readable one by one. It measures the second: the array was checked against the rules on all ' + fmt(S.proof.inputs) + ' possible inputs, and swept fault by fault until it broke.'),
+    el('p', {}, 'Every AI system asks the board to trust two things it cannot see: what the model will decide, and whether the hardware does what the model says. This work removes the first: the rules are proven on unseen data and readable one by one. It measures the second, in emulation: the array was checked against the rules on all ' + fmt(S.proof.inputs) + ' possible inputs, and swept fault by fault until it broke.'),
     el('p', {}, 'What failed is published as loudly as what held: on the assumed device only ' + s.LC3chips + ' of 10 chips stayed exact, because devices drift apart. The ask is a pilot on real silicon, with the edge map as the acceptance test and the first measured energy figure as its output.'),
   );
 }
@@ -340,9 +341,15 @@ function caseDraw() {
     card('A frontier model routing every message', c.ok ? '$' + fmt(c.perMonth) + ' a month' : '–', c.ok ? 'about ' + c.tokensIn + ' tokens in and 5 out per message at the printed price; instructions not counted' : c.why),
     card('The cast', 'no per-message fee', 'decided on the device, from words it reads; electricity per decision is not measured here'),
   );
-  $('casenote').textContent = 'Sources: the share routed right is the library\'s own meter (' + fmt(m.right) + ' right of ' + fmt(m.messages) + ' messages), re-derived by this repository\'s record; the model prices are ' + S.prices.source + ' as read on ' + S.prices.read + '; the message length is the held-out messages\' own average. Your figures stay in this tab.';
+  $('casenote').textContent = 'How: hours a month = messages × (' + fmt(m.right) + ' right ÷ ' + fmt(m.messages) + ' on the meter) × minutes ÷ 60; money = hours × your cost of an hour; the model line = messages × (message tokens × input price + 5 answer tokens × output price). ' + fmt(Math.round((inputs.messages * (m.messages - m.routed)) / m.messages)) + ' messages a month would still be routed by a person. Sources: the share routed right is the library\'s own meter (' + fmt(m.right) + ' right of ' + fmt(m.messages) + ' messages), re-derived by this repository\'s record; the model prices are ' + S.prices.source + ' as read on ' + S.prices.read + '; the message length is the held-out messages\' own average. Your figures stay in this tab.';
 }
 
+function needs() {
+  $('needs').textContent = 'For this library: ' + S.net.rows + ' rows by ' + S.net.cols + ' columns of differential pairs (' + fmt(2 * S.net.W.length) + ' devices), at least ' + (2 ** V('sealed').LC5.find((x) => x.knob === 'bits').last) + ' conductance levels per device, and a current read-out on every column with a comparator per column.';
+}
+function driftModel() {
+  $('driftmodel').textContent = 'In this emulator each device\'s conductance falls as (time since programming) to the power −ν, with ν averaging ' + X.NU + ' and varying by ' + X.NU_SPREAD + ' (one standard deviation) between devices: an assumption shaped like phase-change memory, not a measured device.';
+}
 function ciLine() {
   if (!S.ci) return;
   $('ciline').replaceChildren('CI: ', el('a', { href: S.ci.url }, 'run ' + S.ci.run), ' green on commit ' + S.ci.commit.slice(0, 7) + ', read once by its run id.');

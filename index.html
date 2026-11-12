@@ -84,8 +84,8 @@ footer p+p{margin-top:6px}
 </nav>
 <header class="hero">
   <h1>Verified rules, decided by settling.</h1>
-  <p class="lede">A library of routing rules, each of which passed a test on customer messages it had never seen, is written into the weights of a network that makes its decision by <b>settling</b>: relaxing into its lowest-energy state, with no program stepping through instructions. The network runs on an emulated analogue memory array, with the faults a real device has: few levels, noisy writes, noisy reads, drift, dead cells. The question: does the settled array make the same decision the software makes, and where does that stop being true?</p>
-  <p class="notchip">An emulator, not a chip · no electrical energy is measured · nothing here is alive or aware</p>
+  <p class="lede">A library of routing rules, each of which passed a test on customer messages it had never seen (the estate's <a href="https://sjgant80-hub.github.io/pattern-libraries/">pattern library</a> keeps a rule only after it is right on an unseen batch and again on a batch never used before; that page shows every exam), is written into the weights of a network that makes its decision by <b>settling</b>: relaxing into its lowest-energy state, with no program stepping through instructions. The network runs on an emulated analogue memory array, with the faults a real device has: few levels, noisy writes, noisy reads, drift, dead cells. The question: does the settled array make the same decision the software makes, and where does that stop being true?</p>
+  <p class="notchip">An emulator, not a chip · no electrical energy is measured · nothing here is alive or aware · a real-chip run is <a href="#next">the next step</a></p>
   <p class="verdictline" id="verdictline">Loading the record…</p>
 </header>
 <main>
@@ -95,7 +95,8 @@ footer p+p{margin-top:6px}
   <p class="muted">Read live from the records this repository commits: <code>data/proof.json</code> (every possible input), <code>data/heldout.json</code> (the held-out messages, read once after the code was frozen by hash), <code>data/timing.json</code>. Two readings of every settle are shown: the reading sealed before any code, and a stricter one added after the dev run and before the held-out read (<a href="AMENDMENT.md">AMENDMENT.md</a>).</p>
   <div class="cards" id="resultcards"></div>
   <h3>Every sealed claim, as judged</h3>
-  <div class="tablewrap"><table id="claimtable"><thead><tr><th>Claim</th><th>What it says</th><th>Bar</th><th>Sealed reading</th><th>Sticky reading</th></tr></thead><tbody></tbody></table></div>
+  <div class="tablewrap"><table id="claimtable"><thead><tr><th>Claim</th><th>What it says</th><th>Bar</th><th>Judged from</th><th>Sealed reading</th><th>Sticky reading</th></tr></thead><tbody></tbody></table></div>
+  <p class="small muted">Every claim and bar was fixed in <a href="CLAIMS.md">CLAIMS.md</a> before any code. "Judged from" names the committed file each verdict is read from; GitHub's runner re-derives every one on every push.</p>
 </section>
 
 <section id="try">
@@ -148,7 +149,7 @@ footer p+p{margin-top:6px}
   <h2>What this is, and what it is not</h2>
   <div class="cards">
     <div class="card"><div class="k">It is</div><p>The first step of Simon's plan for <b>the Living Crystal</b>: a material whose arrangement is the program, which computes by settling, refuses what does not fit, and remembers as shape. This step takes a library of rules the estate has already proven on unseen data, writes them into a settling network, and checks that the settled network decides exactly what the software decides.</p></div>
-    <div class="card"><div class="k">It is not a chip</div><p>There is no neuromorphic or memristor hardware in this build. Every device number comes from an <b>emulator</b> of an analogue crossbar, written to model the faults real devices have. A run on real silicon is the next step; it is named below and not done.</p></div>
+    <div class="card"><div class="k">It is not a chip</div><p>An emulator is a program that imitates a device, faults included; a chip is the physical device. There is no neuromorphic or memristor hardware in this build. Every device number comes from an <b>emulator</b> of an analogue crossbar, written to model the faults real devices have. A run on real silicon is the next step; it is named below and not done.</p></div>
     <div class="card"><div class="k">No electrical energy figure</div><p>The network's "energy" is a number the settle lowers, in Hopfield's sense, not electricity. Nothing here measures joules or watts. Speed is stated only as measured, on the machine that ran it.</p></div>
     <div class="card"><div class="k">Not alive, not aware</div><p>The plan's summit, a lattice whose settling models its own settling, is a direction. Everything past this step (grown or annealed materials, seeded copies, other geometries) is <b>parked</b>: not built here and not claimed.</p></div>
     <div class="card"><div class="k">Not a better router</div><p>The cast makes the library's decisions, no more and no fewer. Whether those decisions are right is the library's own claim, measured on its own page.</p></div>
@@ -161,15 +162,15 @@ footer p+p{margin-top:6px}
     <dt>Verified pattern</dt><dd>A rule of the form "when these one or two words are in the message, send it to this team", kept only after it was right on a batch of messages it had never seen and again on a batch never used before. From the estate's pattern library (library three, routing).</dd>
     <dt>The router</dt><dd>The library's own software: it sends a message to the team named by the first kept pattern, in library order, whose words are all present, and names every other team a firing pattern points to (a conflict).</dd>
     <dt>Settling</dt><dd>Every unit looks at the weighted sum of its inputs and switches on or off; repeat until nothing changes. The final state is the answer. There is no instruction pointer: the weights are the program.</dd>
-    <dt>Energy</dt><dd>A single number for a state of the network, which every change made by the settle lowers here. It is a property of the arithmetic, not a power bill.</dd>
+    <dt>Energy</dt><dd>A single number for a state of the network; on the exact device, every change the settle makes lowers it. It is a property of the arithmetic, not a power bill.</dd>
     <dt>Crossbar</dt><dd>A grid of memory devices. Voltages on the rows, currents summed down the columns: one read gives every unit its input at once. Each weight is held as the conductance of a pair of devices (one for plus, one for minus).</dd>
     <dt>Dead band</dt><dd>A column's sense amplifier only commits when the current is clearly positive or clearly negative. In between it does not resolve and holds its last answer. An array with any unresolved column has not settled.</dd>
     <dt>Refused</dt><dd>The array did not settle within its step limit, or (on a damaged array) settled with two teams lit. A refusal hands the message to a person: the safe failure.</dd>
     <dt>Settled wrong</dt><dd>The array settled cleanly to a decision the router would not make: the dangerous failure, because nothing flags it.</dd>
-    <dt>Sealed / sticky reading</dt><dd>Two ways to read the same settle. Sealed: refused only when it does not settle. Sticky (added before the held-out read): also refused when any column failed to resolve on any read along the way, as if each column had a latch that remembers it once wavered.</dd>
+    <dt>Sealed / sticky reading</dt><dd>Two ways to read the same settle. Sealed: refused only when it does not settle. Sticky (added before the held-out read): also refused when any column failed to resolve on any read along the way, as if each column had a latch that remembers it once wavered. For example, under drift a unit can sit undecided for two reads and then be pushed off by another unit; the sealed reading accepts the settled answer, the sticky reading refuses it.</dd>
     <dt>Levels, write noise, read noise</dt><dd>A device holds only a few distinct conductances; programming lands near, not on, the target; every read adds a little noise of its own.</dd>
-    <dt>Drift</dt><dd>Programmed conductances sag over time, and not all by the same amount. "Compensated" means the reader corrects for the average sag; it cannot correct for the differences between devices.</dd>
-    <dt>Stuck cells</dt><dd>Devices that are dead (stuck at zero) or shorted (stuck fully on) and ignore programming.</dd>
+    <dt>Drift</dt><dd>Programmed conductances sag over time, and not all by the same amount. "Compensated" means the reader corrects for the average sag; it cannot correct for the differences between devices. <span id="driftmodel"></span></dd>
+    <dt>Stuck cells</dt><dd>Devices that are dead (stuck at zero) or shorted (stuck fully on) and ignore programming. The emulator places them at random and measures what they do; it does not detect or remap them. A real deployment tests every cell after programming and maps the weights around the bad ones.</dd>
     <dt>Held-out</dt><dd>Messages the network was never developed on, read once, after the code was frozen by its hash.</dd>
   </dl>
 </section>
@@ -192,7 +193,7 @@ footer p+p{margin-top:6px}
   <div class="svgwrap wide" id="howsvg"></div>
   <ol>
     <li><b>The library.</b> The routing library's kept patterns, copied byte for byte from the pattern-libraries repository at a pinned commit. Each names one or two words and one team.</li>
-    <li><b>The cast.</b> Each pattern becomes two units. Its <i>pattern unit</i> gets a strong positive weight from each of its words and a negative bias, so it can only switch on when all its words are present. Its <i>first-pattern unit</i> is driven by its own pattern unit and held down by the pattern unit of every earlier pattern that names a different team, so only the first firing pattern's team can light. First-pattern units of different teams hold each other down. Every weight is the same both ways, which is what gives the network an energy that the settle lowers.</li>
+    <li><b>The cast.</b> Each pattern becomes two units. Its <i>pattern unit</i> gets a strong positive weight from each of its words and a negative bias, so it can only switch on when all its words are present. Its <i>first-pattern unit</i> is driven by its own pattern unit and held down by the pattern unit of every earlier pattern that names a different team, so only the first firing pattern's team can light. First-pattern units of different teams hold each other down. Every weight is the same both ways, which is what gives the network an energy; on the exact device the settle lowers it at every step.</li>
     <li><b>The array.</b> Every weight is written into a pair of devices of an emulated crossbar: one row per input word, two bias rows, one row per unit; one column per unit. The emulator models few levels, write noise, stuck cells, drift and read noise.</li>
     <li><b>The settle.</b> All units start off. Each step is one read of the whole array: every column's current is sensed at once, and each unit switches on, off, or (inside the dead band) holds. When every column has resolved and nothing changed, the array has settled; the team of the lit first-pattern unit is the decision, and the other teams of lit pattern units are the conflicts. If it has not settled within the step limit, it refuses.</li>
   </ol>
@@ -225,10 +226,10 @@ footer p+p{margin-top:6px}
   <h2>Next: a real chip</h2>
   <p>Named here and not done. The emulator says what device a real run needs; only silicon can say whether a device meets it, and what a decision costs in electricity.</p>
   <ol>
-    <li>A crossbar test chip or a memristor development board with per-device programming and read-back (write-verify).</li>
+    <li>A crossbar test chip or a memristor development board with per-device programming and read-back (write-verify). <span id="needs"></span></li>
     <li>Cast the same library, program it, and run the same held-out set and the same sweep on silicon, reading every column's current.</li>
     <li>Measure energy per decision with a power meter: the first real energy figure this work would state.</li>
-    <li>Answer the faults the emulator found first: drift spread (refresh, or a code that tolerates it) and stuck-on cells (test and remap after programming).</li>
+    <li>Answer the faults the emulator found first: drift spread (refresh the array before devices drift apart past the edge, or a code that tolerates it) and stuck-on cells (read back every device after programming, mark any that ignore it, and move that weight to a spare row or column; not built here).</li>
   </ol>
 </section>
 
@@ -236,9 +237,9 @@ footer p+p{margin-top:6px}
   <h2>Adoption</h2>
   <p>Who this step is for today, and how a team would use it.</p>
   <div class="cards">
-    <div class="card"><div class="k">Device and chip teams</div><p>A way to put decisions you can audit onto analogue in-memory hardware, and a tolerance map that says what device quality keeps them exact: read your datasheet against <a href="#edge">Where it breaks</a>.</p></div>
+    <div class="card"><div class="k">Device and chip teams</div><p>A method, tested in emulation, to put decisions you can audit onto analogue in-memory hardware, and a tolerance map that says what device quality keeps them exact: read your datasheet against <a href="#edge">Where it breaks</a>.</p></div>
     <div class="card"><div class="k">Regulated operations</div><p>Every weight in the array traces back to a named rule with its own exam record. When an auditor asks why a message went where it went, the answer is one rule, not a model.</p></div>
-    <div class="card"><div class="k">Edge and offline products</div><p>A decision made where the data is, with no network call and no model in the loop; it refuses rather than guesses when its hardware degrades past what it can carry.</p></div>
+    <div class="card"><div class="k">Edge and offline products</div><p>A decision made where the data is, with no network call and no model in the loop. It refuses glitched inputs and, with the sticky latch, read noise; drift spread and shorted cells can still give a confident wrong answer, so plan refresh and cell testing.</p></div>
   </div>
   <h3>Rolling it out</h3>
   <ol>
@@ -258,7 +259,7 @@ footer p+p{margin-top:6px}
   <h3>The design choices that matter</h3>
   <ul>
     <li><b>Symmetric weights</b>, so the network has an energy and settles (Hopfield, 1982).</li>
-    <li><b>Wide margins:</b> every unit's field at a settled state sits half the largest weight away from its threshold.</li>
+    <li><b>Wide margins:</b> on an exact device, every unit's field at a settled state sits half the largest weight away from its threshold.</li>
     <li><b>A dead band</b> in every sense amplifier, so a field too close to call holds the array unsettled instead of being rounded.</li>
     <li><b>Priority by inhibition:</b> an earlier rule of another team holds a later rule's first-pattern unit down, reproducing "first kept rule wins" with no ordering logic outside the array.</li>
   </ul>
@@ -272,7 +273,7 @@ footer p+p{margin-top:6px}
 
 <section id="business">
   <h2>For business</h2>
-  <p><b>In one breath:</b> decision rules you can audit, proven to compute exactly the same on settling hardware as in software, with a map of how good the hardware must be and a fit-check that refuses rather than guesses when it is not.</p>
+  <p><b>In one breath:</b> decision rules you can audit, proven to compute exactly the same in an emulated settling array as in software on every possible input, with a map of how good real hardware must be to keep it so, and a fit-check that refuses glitched inputs rather than guess.</p>
   <div class="cards" id="roles"></div>
   <h3>The case, on your own figures</h3>
   <p class="muted small">Two lines. First, the hand-routing time the cast's correct routes take off your team, using the library's own measured share of messages routed right. Second, what it would cost to send every message to a frontier model to be routed instead, at the model maker's printed price, counting only the message itself (the least such a call could cost). Change any figure.</p>
@@ -288,7 +289,7 @@ footer p+p{margin-top:6px}
   <ul>
     <li>The decision is made on the device, from which words a message holds; no message leaves it and no model is called.</li>
     <li>Every weight traces to a named rule and its exam record, so the decision path is inspectable end to end.</li>
-    <li>A wavering or faulty array refuses (with the sticky latch on) and hands the message to a person. Stuck-on cells are the exception the record names: they can produce a confident wrong answer, so test and remap after programming.</li>
+    <li>A wavering array refuses (with the sticky latch on) and hands the message to a person. Drift spread and shorted cells are the exceptions the record names: they can produce a confident wrong answer, so refresh the array and test and remap cells after programming.</li>
     <li>Over-driven input lines can forge a two-word rule; the settle does not catch this, so input drivers must clip at the rail.</li>
     <li>UK GDPR: the rules read words, not identities, and run where the data already is. Your data protection officer still signs off the deployment.</li>
   </ul>
