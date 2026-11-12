@@ -1,0 +1,21 @@
+LIVING CRYSTAL — credits and provenance
+
+Verified patterns and the software router: sjgant80-hub/pattern-libraries at bd450db4d2e5fa2af19c520f85a9ceededb4e6ff
+(MIT, Simon Gant · AI Native Solutions). vendor/pattern-libraries/ holds those files byte for byte; every SHA-256 is
+pinned in vendor/SOURCES.json.
+
+Messages: Banking77 (Casanueva et al., 2020, "Efficient Intent Detection with Dual Sentence Encoders") and NLU++
+(Casanueva et al., 2022, "NLU++: A Multi-Label, Slot-Rich, Generalisable Dataset for Natural Language Understanding in
+Task-Oriented Dialogue"), PolyAI, github.com/PolyAI-LDN/task-specific-datasets at 57ec275, CC BY 4.0. They are fetched
+at run time and checked against a pinned manifest; no message text is committed here. Derived inputs (which of the
+library's 21 words each held-out message holds) are committed with the held-out record, under the same licence.
+
+The energy network follows J. J. Hopfield (1982), "Neural networks and physical systems with emergent collective
+computational abilities", PNAS 79(8). This repository's cast, crossbar emulator and record (src/) are original code.
+
+The settling ladder this builds on: sjgant80-hub/settling-cell (Rung 1) to sjgant80-hub/chip-immune (Rung 7).
+
+Powered by the Konomi architecture, created by Thomas Frumkin.
+
+This repository's own code (src/, app.mjs, worker.mjs, the tests and tools) is MIT licensed (LICENSE).
+Built by Kar for AI Native Solutions.

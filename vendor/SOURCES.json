@@ -1,0 +1,19 @@
+{
+ "from": "https://github.com/sjgant80-hub/pattern-libraries",
+ "commit": "bd450db4d2e5fa2af19c520f85a9ceededb4e6ff",
+ "licence": "MIT (Simon Gant · AI Native Solutions)",
+ "files": {
+  "LICENSE": "5088f35bf429d7c53f2f8bb89d44db1c28f9dbbb655d6d7b1bd575c73b0ee20e",
+  "data/route/state.json": "c51e8ee0f98e87914a8408b4a9fcf690e56cbf974697be5ecdaa526246e735cd",
+  "src/cycle.mjs": "e26b293c8c98c4cef25607e46c5b8a2f8fa1b6e57b929f07049a4041d88d8374",
+  "src/extract.mjs": "bea76e7980a2154beeac55dca2f7f85bdaa15c4eec1958bcae354fe46e60ffe8",
+  "src/triage.mjs": "96a6423d041024b9e89d77ba80c9c6863c9705e12422edcd4f45e71491063fe9",
+  "tools/polyai.mjs": "114c7cc365fc7e2460d4fd5457bb5f624dce56fe5a002d474cc282fd3565ddb8",
+  "tools/polyai_fetch.mjs": "93abe7ea22a138b45dc727a2d9e701d08d68110367cac089fcfff824b25ca35f",
+  "vendor/mint/src/baseline.mjs": "a4b4504cd4d53d4fc46c58e268a0b367485560de6376b6dfc0f3c81ee4f515eb",
+  "vendor/mint/src/experiment.mjs": "e75a63da05b4aa36fffa6b4af9354190ee8bad052c82675556b2aaf936301496",
+  "vendor/mint/src/journal.mjs": "6077dbc8b605143334f6ad028ab9bdbca9d5a75120310d4c7861a3807dfe4992",
+  "vendor/mint/vendor/fall-kit/light/sha256.mjs": "cf60afffd36df071b277da214ed61a7b3f4923e443bfadb06656bb7da4756bc1",
+  "vendor/patlib/patlib.mjs": "b04c5e35a3612f353906ed84a6f0f4e316f30d645735779e191f9f9cebbfe73b"
+ }
+}

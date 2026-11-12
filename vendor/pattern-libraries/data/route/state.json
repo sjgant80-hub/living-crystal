@@ -1,0 +1,1373 @@
+{
+ "cycle": 1,
+ "library": [
+  {
+   "when": [
+    "rates"
+   ],
+   "then": "exchange-rate",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "f29a8c39",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 9,
+     "right": 8,
+     "prec": 0.8888888888888888,
+     "basePrec": 0.1111111111111111
+    },
+    "final": {
+     "cover": 7,
+     "right": 7,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 9,
+     "right": 8,
+     "base": 0,
+     "rightRate": 0.888889,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 7,
+     "right": 7,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "auto"
+   ],
+   "then": "automatic-top-up",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "43f1894c",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 6,
+     "right": 6,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 7,
+     "right": 7,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 6,
+     "right": 6,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 7,
+     "right": 7,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "unblock"
+   ],
+   "then": "pin-blocked",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "fbc12296",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 5,
+     "right": 5,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 6,
+     "right": 6,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 5,
+     "right": 5,
+     "base": 2,
+     "rightRate": 1,
+     "baseRate": 0.4,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 6,
+     "right": 6,
+     "base": 3,
+     "rightRate": 1,
+     "baseRate": 0.5,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "pin",
+    "unblock"
+   ],
+   "then": "pin-blocked",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-2"
+   },
+   "receipt": "cfcbb59a",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 5,
+     "right": 5,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 6,
+     "right": 6,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 5,
+     "right": 5,
+     "base": 2,
+     "rightRate": 1,
+     "baseRate": 0.4,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 6,
+     "right": 6,
+     "base": 3,
+     "rightRate": 1,
+     "baseRate": 0.5,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "contactless"
+   ],
+   "then": "contactless-not-working",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "118838f0",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 6,
+     "right": 6,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 7,
+     "right": 7,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 6,
+     "right": 6,
+     "base": 3,
+     "rightRate": 1,
+     "baseRate": 0.5,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 7,
+     "right": 7,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "deposited"
+   ],
+   "then": "balance-not-updated-after-cheque-or-cash-deposit",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "d0704672",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 8,
+     "right": 7,
+     "prec": 0.875,
+     "basePrec": 0.125
+    },
+    "final": {
+     "cover": 6,
+     "right": 5,
+     "prec": 0.8333333333333334,
+     "basePrec": 0.16666666666666666
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 8,
+     "right": 7,
+     "base": 0,
+     "rightRate": 0.875,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 6,
+     "right": 5,
+     "base": 0,
+     "rightRate": 0.833333,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "visa"
+   ],
+   "then": "visa-or-mastercard",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "eab0ad17",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 9,
+     "right": 9,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 8,
+     "right": 8,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 9,
+     "right": 9,
+     "base": 5,
+     "rightRate": 1,
+     "baseRate": 0.555556,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 8,
+     "right": 8,
+     "base": 7,
+     "rightRate": 1,
+     "baseRate": 0.875,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "direct"
+   ],
+   "then": "direct-debit-payment-not-recognised",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "5c155800",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 20,
+     "right": 20,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 13,
+     "right": 12,
+     "prec": 0.9230769230769231,
+     "basePrec": 0.07692307692307693
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 20,
+     "right": 20,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 13,
+     "right": 12,
+     "base": 0,
+     "rightRate": 0.923077,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "debit"
+   ],
+   "then": "direct-debit-payment-not-recognised",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "237271db",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 24,
+     "right": 24,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 13,
+     "right": 13,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 24,
+     "right": 24,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 13,
+     "right": 13,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "passcode"
+   ],
+   "then": "passcode-forgotten",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "fb7a2dd3",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 6,
+     "right": 6,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 6,
+     "right": 6,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 6,
+     "right": 6,
+     "base": 2,
+     "rightRate": 1,
+     "baseRate": 0.333333,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 6,
+     "right": 6,
+     "base": 2,
+     "rightRate": 1,
+     "baseRate": 0.333333,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "phone"
+   ],
+   "then": "lost-or-stolen-phone",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "ac4b5206",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 15,
+     "right": 14,
+     "prec": 0.9333333333333333,
+     "basePrec": 0.06666666666666667
+    },
+    "final": {
+     "cover": 8,
+     "right": 8,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 15,
+     "right": 14,
+     "base": 1,
+     "rightRate": 0.933333,
+     "baseRate": 0.066667,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 8,
+     "right": 8,
+     "base": 1,
+     "rightRate": 1,
+     "baseRate": 0.125,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "delete"
+   ],
+   "then": "terminate-account",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "5506dd92",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 5,
+     "right": 5,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 7,
+     "right": 7,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 5,
+     "right": 5,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 7,
+     "right": 7,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "duplicate"
+   ],
+   "then": "transaction-charged-twice",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "8d11db63",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 6,
+     "right": 6,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 5,
+     "right": 5,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 6,
+     "right": 6,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 5,
+     "right": 5,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "source"
+   ],
+   "then": "verify-source-of-funds",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "83d7c167",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 6,
+     "right": 6,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 7,
+     "right": 7,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 6,
+     "right": 6,
+     "base": 1,
+     "rightRate": 1,
+     "baseRate": 0.166667,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 7,
+     "right": 7,
+     "base": 1,
+     "rightRate": 1,
+     "baseRate": 0.142857,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "beneficiary"
+   ],
+   "then": "beneficiary-not-allowed",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "33a6987f",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 9,
+     "right": 9,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 5,
+     "right": 4,
+     "prec": 0.8,
+     "basePrec": 0.2
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 9,
+     "right": 9,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 5,
+     "right": 4,
+     "base": 0,
+     "rightRate": 0.8,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "disposable",
+    "virtual"
+   ],
+   "then": "get-disposable-virtual-card",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-2"
+   },
+   "receipt": "c75a1ede",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 8,
+     "right": 7,
+     "prec": 0.875,
+     "basePrec": 0.125
+    },
+    "final": {
+     "cover": 12,
+     "right": 10,
+     "prec": 0.8333333333333334,
+     "basePrec": 0.16666666666666666
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 8,
+     "right": 7,
+     "base": 3,
+     "rightRate": 0.875,
+     "baseRate": 0.375,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 12,
+     "right": 10,
+     "base": 2,
+     "rightRate": 0.833333,
+     "baseRate": 0.166667,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "apple"
+   ],
+   "then": "apple-pay-or-google-pay",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "bba317a4",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 11,
+     "right": 11,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 10,
+     "right": 10,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 11,
+     "right": 11,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 10,
+     "right": 10,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "google"
+   ],
+   "then": "apple-pay-or-google-pay",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "3489c077",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 7,
+     "right": 7,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 4,
+     "right": 4,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 7,
+     "right": 7,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 4,
+     "right": 4,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "apple",
+    "pay"
+   ],
+   "then": "apple-pay-or-google-pay",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-2"
+   },
+   "receipt": "3839151b",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 9,
+     "right": 9,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 9,
+     "right": 9,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 9,
+     "right": 9,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 9,
+     "right": 9,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  },
+  {
+   "when": [
+    "countries"
+   ],
+   "then": "country-support",
+   "prov": {
+    "source": "mined",
+    "model": "none",
+    "proposedAt": "2026-11-11T11:28:12.210Z",
+    "feed": "banking77",
+    "trainN": 3000,
+    "recipe": "mine-1"
+   },
+   "receipt": "30c5a784",
+   "scores": {
+    "base": "other",
+    "held": {
+     "cover": 5,
+     "right": 5,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "final": {
+     "cover": 5,
+     "right": 5,
+     "prec": 1,
+     "basePrec": 0
+    },
+    "heldDocs": {
+     "ok": true,
+     "docs": 5,
+     "right": 5,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    },
+    "finalDocs": {
+     "ok": true,
+     "docs": 5,
+     "right": 5,
+     "base": 0,
+     "rightRate": 1,
+     "baseRate": 0,
+     "why": ""
+    }
+   }
+  }
+ ],
+ "records": [
+  {
+   "library": "route",
+   "task": "exchange-rate",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "rates"
+    ],
+    "then": "exchange-rate"
+   },
+   "receipt": "f29a8c39"
+  },
+  {
+   "library": "route",
+   "task": "automatic-top-up",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "auto"
+    ],
+    "then": "automatic-top-up"
+   },
+   "receipt": "43f1894c"
+  },
+  {
+   "library": "route",
+   "task": "pin-blocked",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "unblock"
+    ],
+    "then": "pin-blocked"
+   },
+   "receipt": "fbc12296"
+  },
+  {
+   "library": "route",
+   "task": "pin-blocked",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-2",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "pin",
+     "unblock"
+    ],
+    "then": "pin-blocked"
+   },
+   "receipt": "cfcbb59a"
+  },
+  {
+   "library": "route",
+   "task": "contactless-not-working",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "contactless"
+    ],
+    "then": "contactless-not-working"
+   },
+   "receipt": "118838f0"
+  },
+  {
+   "library": "route",
+   "task": "balance-not-updated-after-cheque-or-cash-deposit",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "deposited"
+    ],
+    "then": "balance-not-updated-after-cheque-or-cash-deposit"
+   },
+   "receipt": "d0704672"
+  },
+  {
+   "library": "route",
+   "task": "visa-or-mastercard",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "visa"
+    ],
+    "then": "visa-or-mastercard"
+   },
+   "receipt": "eab0ad17"
+  },
+  {
+   "library": "route",
+   "task": "direct-debit-payment-not-recognised",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "direct"
+    ],
+    "then": "direct-debit-payment-not-recognised"
+   },
+   "receipt": "5c155800"
+  },
+  {
+   "library": "route",
+   "task": "direct-debit-payment-not-recognised",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "debit"
+    ],
+    "then": "direct-debit-payment-not-recognised"
+   },
+   "receipt": "237271db"
+  },
+  {
+   "library": "route",
+   "task": "passcode-forgotten",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "passcode"
+    ],
+    "then": "passcode-forgotten"
+   },
+   "receipt": "fb7a2dd3"
+  },
+  {
+   "library": "route",
+   "task": "lost-or-stolen-phone",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "phone"
+    ],
+    "then": "lost-or-stolen-phone"
+   },
+   "receipt": "ac4b5206"
+  },
+  {
+   "library": "route",
+   "task": "terminate-account",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "delete"
+    ],
+    "then": "terminate-account"
+   },
+   "receipt": "5506dd92"
+  },
+  {
+   "library": "route",
+   "task": "transaction-charged-twice",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "duplicate"
+    ],
+    "then": "transaction-charged-twice"
+   },
+   "receipt": "8d11db63"
+  },
+  {
+   "library": "route",
+   "task": "verify-source-of-funds",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "source"
+    ],
+    "then": "verify-source-of-funds"
+   },
+   "receipt": "83d7c167"
+  },
+  {
+   "library": "route",
+   "task": "beneficiary-not-allowed",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "beneficiary"
+    ],
+    "then": "beneficiary-not-allowed"
+   },
+   "receipt": "33a6987f"
+  },
+  {
+   "library": "route",
+   "task": "get-disposable-virtual-card",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-2",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "disposable",
+     "virtual"
+    ],
+    "then": "get-disposable-virtual-card"
+   },
+   "receipt": "c75a1ede"
+  },
+  {
+   "library": "route",
+   "task": "apple-pay-or-google-pay",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "apple"
+    ],
+    "then": "apple-pay-or-google-pay"
+   },
+   "receipt": "bba317a4"
+  },
+  {
+   "library": "route",
+   "task": "apple-pay-or-google-pay",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "google"
+    ],
+    "then": "apple-pay-or-google-pay"
+   },
+   "receipt": "3489c077"
+  },
+  {
+   "library": "route",
+   "task": "apple-pay-or-google-pay",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-2",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "apple",
+     "pay"
+    ],
+    "then": "apple-pay-or-google-pay"
+   },
+   "receipt": "3839151b"
+  },
+  {
+   "library": "route",
+   "task": "country-support",
+   "type": "route",
+   "tier": "mined",
+   "recipe": "mine-1",
+   "cost": {
+    "calls": 0,
+    "cents": 0
+   },
+   "cycle": 0,
+   "at": "2026-11-11T11:28:12.210Z",
+   "rule": {
+    "when": [
+     "countries"
+    ],
+    "then": "country-support"
+   },
+   "receipt": "30c5a784"
+  }
+ ]
+}
