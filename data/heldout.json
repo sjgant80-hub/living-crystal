@@ -1,0 +1,6078 @@
+{
+ "set": "held-out",
+ "what": "every Banking77 message outside the library's seed slice, in its exam order, then every NLU++ message",
+ "inputs": {
+  "file": "data/heldout-inputs.json",
+  "sha256": "840fa830837e1466f30181bf3d3bb8e81fee664472b62601eadfd48e69335b69"
+ },
+ "banking77": 10083,
+ "nlupp": 3080,
+ "chars": 715496,
+ "meter": {
+  "messages": 1000,
+  "routed": 117,
+  "right": 105
+ },
+ "n": 13163,
+ "routed": 1399,
+ "conflicts": 12,
+ "ideal": {
+  "sealed": {
+   "n": 13163,
+   "match": 13163,
+   "unsettled": 0,
+   "two": 0,
+   "wavered": 0,
+   "wrong": 0,
+   "reads": 15961,
+   "maxReads": 3,
+   "energyBad": 0
+  },
+  "sticky": {
+   "n": 13163,
+   "match": 13163,
+   "unsettled": 0,
+   "two": 0,
+   "wavered": 0,
+   "wrong": 0,
+   "reads": 15961,
+   "maxReads": 3
+  }
+ },
+ "profile": {
+  "device": {
+   "bits": 4,
+   "write": 0.02,
+   "read": 0.02,
+   "t": 86400,
+   "comp": true,
+   "p0": 0,
+   "p1": 0
+  },
+  "chips": [
+   {
+    "sealed": {
+     "n": 13163,
+     "match": 13163,
+     "unsettled": 0,
+     "two": 0,
+     "wavered": 0,
+     "wrong": 0,
+     "reads": 15963,
+     "maxReads": 4
+    },
+    "sticky": {
+     "n": 13163,
+     "match": 13161,
+     "unsettled": 0,
+     "two": 0,
+     "wavered": 2,
+     "wrong": 0,
+     "reads": 15963,
+     "maxReads": 4
+    }
+   },
+   {
+    "sealed": {
+     "n": 13163,
+     "match": 12805,
+     "unsettled": 345,
+     "two": 0,
+     "wavered": 0,
+     "wrong": 13,
+     "reads": 20139,
+     "maxReads": 12
+    },
+    "sticky": {
+     "n": 13163,
+     "match": 12658,
+     "unsettled": 345,
+     "two": 0,
+     "wavered": 160,
+     "wrong": 0,
+     "reads": 20139,
+     "maxReads": 12
+    }
+   },
+   {
+    "sealed": {
+     "n": 13163,
+     "match": 13115,
+     "unsettled": 48,
+     "two": 0,
+     "wavered": 0,
+     "wrong": 0,
+     "reads": 16841,
+     "maxReads": 12
+    },
+    "sticky": {
+     "n": 13163,
+     "match": 12929,
+     "unsettled": 48,
+     "two": 0,
+     "wavered": 186,
+     "wrong": 0,
+     "reads": 16841,
+     "maxReads": 12
+    }
+   },
+   {
+    "sealed": {
+     "n": 13163,
+     "match": 12933,
+     "unsettled": 230,
+     "two": 0,
+     "wavered": 0,
+     "wrong": 0,
+     "reads": 19071,
+     "maxReads": 12
+    },
+    "sticky": {
+     "n": 13163,
+     "match": 12803,
+     "unsettled": 230,
+     "two": 0,
+     "wavered": 130,
+     "wrong": 0,
+     "reads": 19071,
+     "maxReads": 12
+    }
+   },
+   {
+    "sealed": {
+     "n": 13163,
+     "match": 13028,
+     "unsettled": 134,
+     "two": 0,
+     "wavered": 0,
+     "wrong": 1,
+     "reads": 17192,
+     "maxReads": 12
+    },
+    "sticky": {
+     "n": 13163,
+     "match": 13004,
+     "unsettled": 134,
+     "two": 0,
+     "wavered": 24,
+     "wrong": 1,
+     "reads": 17192,
+     "maxReads": 12
+    }
+   },
+   {
+    "sealed": {
+     "n": 13163,
+     "match": 13074,
+     "unsettled": 89,
+     "two": 0,
+     "wavered": 0,
+     "wrong": 0,
+     "reads": 16822,
+     "maxReads": 12
+    },
+    "sticky": {
+     "n": 13163,
+     "match": 13052,
+     "unsettled": 89,
+     "two": 0,
+     "wavered": 22,
+     "wrong": 0,
+     "reads": 16822,
+     "maxReads": 12
+    }
+   },
+   {
+    "sealed": {
+     "n": 13163,
+     "match": 12881,
+     "unsettled": 2,
+     "two": 0,
+     "wavered": 0,
+     "wrong": 280,
+     "reads": 16041,
+     "maxReads": 12
+    },
+    "sticky": {
+     "n": 13163,
+     "match": 12875,
+     "unsettled": 2,
+     "two": 0,
+     "wavered": 9,
+     "wrong": 277,
+     "reads": 16041,
+     "maxReads": 12
+    }
+   },
+   {
+    "sealed": {
+     "n": 13163,
+     "match": 13110,
+     "unsettled": 8,
+     "two": 0,
+     "wavered": 0,
+     "wrong": 45,
+     "reads": 16370,
+     "maxReads": 12
+    },
+    "sticky": {
+     "n": 13163,
+     "match": 12904,
+     "unsettled": 8,
+     "two": 0,
+     "wavered": 237,
+     "wrong": 14,
+     "reads": 16370,
+     "maxReads": 12
+    }
+   },
+   {
+    "sealed": {
+     "n": 13163,
+     "match": 13004,
+     "unsettled": 44,
+     "two": 0,
+     "wavered": 0,
+     "wrong": 115,
+     "reads": 16236,
+     "maxReads": 12
+    },
+    "sticky": {
+     "n": 13163,
+     "match": 12968,
+     "unsettled": 44,
+     "two": 0,
+     "wavered": 59,
+     "wrong": 92,
+     "reads": 16236,
+     "maxReads": 12
+    }
+   },
+   {
+    "sealed": {
+     "n": 13163,
+     "match": 13070,
+     "unsettled": 15,
+     "two": 0,
+     "wavered": 0,
+     "wrong": 78,
+     "reads": 16441,
+     "maxReads": 12
+    },
+    "sticky": {
+     "n": 13163,
+     "match": 12941,
+     "unsettled": 15,
+     "two": 0,
+     "wavered": 194,
+     "wrong": 13,
+     "reads": 16441,
+     "maxReads": 12
+    }
+   }
+  ]
+ },
+ "sweep": [
+  {
+   "knob": "bits",
+   "points": [
+    {
+     "value": 8,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 6,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 5,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 4,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 3,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 2,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 1,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 49,
+        "unsettled": 13114,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 157515,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 13114,
+        "two": 0,
+        "wavered": 49,
+        "wrong": 0,
+        "reads": 157515,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 49,
+        "unsettled": 13114,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 157515,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 13114,
+        "two": 0,
+        "wavered": 49,
+        "wrong": 0,
+        "reads": 157515,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 49,
+        "unsettled": 13114,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 157515,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 13114,
+        "two": 0,
+        "wavered": 49,
+        "wrong": 0,
+        "reads": 157515,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 49,
+        "unsettled": 13114,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 157515,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 13114,
+        "two": 0,
+        "wavered": 49,
+        "wrong": 0,
+        "reads": 157515,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 49,
+        "unsettled": 13114,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 157515,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 13114,
+        "two": 0,
+        "wavered": 49,
+        "wrong": 0,
+        "reads": 157515,
+        "maxReads": 12
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "knob": "write",
+   "points": [
+    {
+     "value": 0.005,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.01,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.02,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.03,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.05,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13162,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13161,
+        "unsettled": 2,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15979,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13161,
+        "unsettled": 2,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15979,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13028,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 135,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.08,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 919,
+        "unsettled": 12146,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 98,
+        "reads": 148504,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 302,
+        "unsettled": 12146,
+        "two": 0,
+        "wavered": 715,
+        "wrong": 0,
+        "reads": 148504,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 890,
+        "unsettled": 12023,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 250,
+        "reads": 147395,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 518,
+        "unsettled": 12023,
+        "two": 0,
+        "wavered": 622,
+        "wrong": 0,
+        "reads": 147395,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12646,
+        "unsettled": 517,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 20614,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12452,
+        "unsettled": 517,
+        "two": 0,
+        "wavered": 194,
+        "wrong": 0,
+        "reads": 20614,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12797,
+        "unsettled": 365,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 1,
+        "reads": 19517,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12363,
+        "unsettled": 365,
+        "two": 0,
+        "wavered": 435,
+        "wrong": 0,
+        "reads": 19517,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12989,
+        "unsettled": 172,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 2,
+        "reads": 17837,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12425,
+        "unsettled": 172,
+        "two": 0,
+        "wavered": 566,
+        "wrong": 0,
+        "reads": 17837,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.12,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 11620,
+        "unsettled": 1353,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 190,
+        "reads": 29753,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 11026,
+        "unsettled": 1353,
+        "two": 0,
+        "wavered": 784,
+        "wrong": 0,
+        "reads": 29753,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 185,
+        "unsettled": 12607,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 371,
+        "reads": 153420,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 1,
+        "unsettled": 12607,
+        "two": 0,
+        "wavered": 555,
+        "wrong": 0,
+        "reads": 153420,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 323,
+        "unsettled": 12834,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 6,
+        "reads": 154998,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 28,
+        "unsettled": 12834,
+        "two": 0,
+        "wavered": 301,
+        "wrong": 0,
+        "reads": 154998,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 12767,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 396,
+        "reads": 154395,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 12767,
+        "two": 0,
+        "wavered": 396,
+        "wrong": 0,
+        "reads": 154395,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 408,
+        "unsettled": 12639,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 116,
+        "reads": 153021,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 151,
+        "unsettled": 12639,
+        "two": 0,
+        "wavered": 373,
+        "wrong": 0,
+        "reads": 153021,
+        "maxReads": 12
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "knob": "read",
+   "points": [
+    {
+     "value": 0.005,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.01,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.02,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.03,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.05,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.08,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15962,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13162,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 15962,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15962,
+        "maxReads": 4
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13162,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 15962,
+        "maxReads": 4
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15962,
+        "maxReads": 4
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13162,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 15962,
+        "maxReads": 4
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13162,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15962,
+        "maxReads": 4
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13162,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 15962,
+        "maxReads": 4
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.12,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13162,
+        "unsettled": 1,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15984,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13141,
+        "unsettled": 1,
+        "two": 0,
+        "wavered": 21,
+        "wrong": 0,
+        "reads": 15984,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15974,
+        "maxReads": 4
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13147,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 16,
+        "wrong": 0,
+        "reads": 15974,
+        "maxReads": 4
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15975,
+        "maxReads": 5
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13147,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 16,
+        "wrong": 0,
+        "reads": 15975,
+        "maxReads": 5
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15980,
+        "maxReads": 6
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13147,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 16,
+        "wrong": 0,
+        "reads": 15980,
+        "maxReads": 6
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13162,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 1,
+        "reads": 15970,
+        "maxReads": 4
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13145,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 17,
+        "wrong": 1,
+        "reads": 15970,
+        "maxReads": 4
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.2,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13139,
+        "unsettled": 4,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 20,
+        "reads": 16277,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12939,
+        "unsettled": 4,
+        "two": 0,
+        "wavered": 206,
+        "wrong": 14,
+        "reads": 16277,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13138,
+        "unsettled": 7,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 18,
+        "reads": 16341,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12931,
+        "unsettled": 7,
+        "two": 0,
+        "wavered": 211,
+        "wrong": 14,
+        "reads": 16341,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13134,
+        "unsettled": 11,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 18,
+        "reads": 16408,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12890,
+        "unsettled": 11,
+        "two": 0,
+        "wavered": 249,
+        "wrong": 13,
+        "reads": 16408,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13138,
+        "unsettled": 8,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 17,
+        "reads": 16358,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12901,
+        "unsettled": 8,
+        "two": 0,
+        "wavered": 241,
+        "wrong": 13,
+        "reads": 16358,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13138,
+        "unsettled": 9,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 16,
+        "reads": 16361,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12926,
+        "unsettled": 9,
+        "two": 0,
+        "wavered": 216,
+        "wrong": 12,
+        "reads": 16361,
+        "maxReads": 12
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "knob": "drift-raw",
+   "points": [
+    {
+     "value": 60,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 3600,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13092,
+        "unsettled": 71,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16600,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13092,
+        "unsettled": 71,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16600,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12973,
+        "unsettled": 190,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17999,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12972,
+        "unsettled": 190,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 17999,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12991,
+        "unsettled": 172,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17761,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12991,
+        "unsettled": 172,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17761,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13048,
+        "unsettled": 115,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16996,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13045,
+        "unsettled": 115,
+        "two": 0,
+        "wavered": 3,
+        "wrong": 0,
+        "reads": 16996,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 86400,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12943,
+        "unsettled": 220,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17941,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12943,
+        "unsettled": 220,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17941,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12745,
+        "unsettled": 418,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 20051,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12744,
+        "unsettled": 418,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 20051,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12935,
+        "unsettled": 228,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 18013,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12934,
+        "unsettled": 228,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 18013,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13048,
+        "unsettled": 115,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16996,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13048,
+        "unsettled": 115,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16996,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12985,
+        "unsettled": 178,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17563,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12984,
+        "unsettled": 178,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 17563,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 604800,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12848,
+        "unsettled": 314,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 1,
+        "reads": 18787,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12846,
+        "unsettled": 314,
+        "two": 0,
+        "wavered": 3,
+        "wrong": 0,
+        "reads": 18787,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12873,
+        "unsettled": 289,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 1,
+        "reads": 18818,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12872,
+        "unsettled": 289,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 1,
+        "reads": 18818,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12951,
+        "unsettled": 212,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17869,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12951,
+        "unsettled": 212,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17869,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12293,
+        "unsettled": 520,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 350,
+        "reads": 21593,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12293,
+        "unsettled": 520,
+        "two": 0,
+        "wavered": 2,
+        "wrong": 348,
+        "reads": 21593,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12842,
+        "unsettled": 321,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 18850,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12842,
+        "unsettled": 321,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 18850,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 2592000,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12580,
+        "unsettled": 292,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 291,
+        "reads": 19169,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12580,
+        "unsettled": 292,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 291,
+        "reads": 19169,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12722,
+        "unsettled": 441,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 19930,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12720,
+        "unsettled": 441,
+        "two": 0,
+        "wavered": 2,
+        "wrong": 0,
+        "reads": 19930,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12384,
+        "unsettled": 778,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 1,
+        "reads": 22963,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12384,
+        "unsettled": 778,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 22963,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12977,
+        "unsettled": 118,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 68,
+        "reads": 16941,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12977,
+        "unsettled": 118,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 67,
+        "reads": 16941,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13007,
+        "unsettled": 155,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 1,
+        "reads": 17356,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13007,
+        "unsettled": 155,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 0,
+        "reads": 17356,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 31536000,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 11574,
+        "unsettled": 1587,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 2,
+        "reads": 31776,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 11570,
+        "unsettled": 1587,
+        "two": 0,
+        "wavered": 6,
+        "wrong": 0,
+        "reads": 31776,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12572,
+        "unsettled": 591,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 21548,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12572,
+        "unsettled": 591,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 21548,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12726,
+        "unsettled": 437,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 19894,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12726,
+        "unsettled": 437,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 19894,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12030,
+        "unsettled": 491,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 642,
+        "reads": 21646,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12023,
+        "unsettled": 491,
+        "two": 0,
+        "wavered": 10,
+        "wrong": 639,
+        "reads": 21646,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12552,
+        "unsettled": 583,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 28,
+        "reads": 21152,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12550,
+        "unsettled": 583,
+        "two": 0,
+        "wavered": 2,
+        "wrong": 28,
+        "reads": 21152,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 315360000,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12397,
+        "unsettled": 763,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 3,
+        "reads": 22828,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12397,
+        "unsettled": 763,
+        "two": 0,
+        "wavered": 3,
+        "wrong": 0,
+        "reads": 22828,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12410,
+        "unsettled": 753,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 23006,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12407,
+        "unsettled": 753,
+        "two": 0,
+        "wavered": 3,
+        "wrong": 0,
+        "reads": 23006,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12036,
+        "unsettled": 1018,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 109,
+        "reads": 25534,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12033,
+        "unsettled": 1018,
+        "two": 0,
+        "wavered": 3,
+        "wrong": 109,
+        "reads": 25534,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12351,
+        "unsettled": 651,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 161,
+        "reads": 21766,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12351,
+        "unsettled": 651,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 161,
+        "reads": 21766,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 11819,
+        "unsettled": 898,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 446,
+        "reads": 24943,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 11814,
+        "unsettled": 898,
+        "two": 0,
+        "wavered": 31,
+        "wrong": 420,
+        "reads": 24943,
+        "maxReads": 12
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "knob": "drift-comp",
+   "points": [
+    {
+     "value": 60,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 3600,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13097,
+        "unsettled": 66,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16555,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13097,
+        "unsettled": 66,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16555,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13158,
+        "unsettled": 5,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16006,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13158,
+        "unsettled": 5,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16006,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12982,
+        "unsettled": 181,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17590,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12982,
+        "unsettled": 181,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17590,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 86400,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12877,
+        "unsettled": 171,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 115,
+        "reads": 17270,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12877,
+        "unsettled": 171,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 115,
+        "reads": 17270,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12676,
+        "unsettled": 487,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 21030,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12665,
+        "unsettled": 487,
+        "two": 0,
+        "wavered": 11,
+        "wrong": 0,
+        "reads": 21030,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12998,
+        "unsettled": 165,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17774,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12998,
+        "unsettled": 165,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17774,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13090,
+        "unsettled": 73,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16618,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13084,
+        "unsettled": 73,
+        "two": 0,
+        "wavered": 6,
+        "wrong": 0,
+        "reads": 16618,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 604800,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13048,
+        "unsettled": 115,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16996,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13048,
+        "unsettled": 115,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 16996,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12769,
+        "unsettled": 393,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 1,
+        "reads": 19826,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12768,
+        "unsettled": 393,
+        "two": 0,
+        "wavered": 2,
+        "wrong": 0,
+        "reads": 19826,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12723,
+        "unsettled": 242,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 198,
+        "reads": 17879,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12723,
+        "unsettled": 242,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 198,
+        "reads": 17879,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12983,
+        "unsettled": 54,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 126,
+        "reads": 16699,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12982,
+        "unsettled": 54,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 126,
+        "reads": 16699,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12798,
+        "unsettled": 250,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 115,
+        "reads": 17981,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12796,
+        "unsettled": 250,
+        "two": 0,
+        "wavered": 2,
+        "wrong": 115,
+        "reads": 17981,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 2592000,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12659,
+        "unsettled": 494,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 10,
+        "reads": 20407,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12659,
+        "unsettled": 494,
+        "two": 0,
+        "wavered": 10,
+        "wrong": 0,
+        "reads": 20407,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12870,
+        "unsettled": 290,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 3,
+        "reads": 18571,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12870,
+        "unsettled": 290,
+        "two": 0,
+        "wavered": 3,
+        "wrong": 0,
+        "reads": 18571,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12906,
+        "unsettled": 93,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 164,
+        "reads": 16519,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12906,
+        "unsettled": 93,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 164,
+        "reads": 16519,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12258,
+        "unsettled": 445,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 460,
+        "reads": 20704,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12258,
+        "unsettled": 445,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 460,
+        "reads": 20704,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12661,
+        "unsettled": 335,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 167,
+        "reads": 19496,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12660,
+        "unsettled": 335,
+        "two": 0,
+        "wavered": 1,
+        "wrong": 167,
+        "reads": 19496,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 31536000,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12939,
+        "unsettled": 224,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17977,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12939,
+        "unsettled": 224,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 17977,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12784,
+        "unsettled": 270,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 109,
+        "reads": 18439,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12782,
+        "unsettled": 270,
+        "two": 0,
+        "wavered": 3,
+        "wrong": 108,
+        "reads": 18439,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12637,
+        "unsettled": 498,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 28,
+        "reads": 20711,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12637,
+        "unsettled": 498,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 28,
+        "reads": 20711,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12353,
+        "unsettled": 515,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 295,
+        "reads": 21444,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12353,
+        "unsettled": 515,
+        "two": 0,
+        "wavered": 4,
+        "wrong": 291,
+        "reads": 21444,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12142,
+        "unsettled": 350,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 671,
+        "reads": 20137,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12142,
+        "unsettled": 350,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 671,
+        "reads": 20137,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 315360000,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12507,
+        "unsettled": 324,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 332,
+        "reads": 18413,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12507,
+        "unsettled": 324,
+        "two": 0,
+        "wavered": 3,
+        "wrong": 329,
+        "reads": 18413,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12475,
+        "unsettled": 273,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 415,
+        "reads": 18785,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12475,
+        "unsettled": 273,
+        "two": 0,
+        "wavered": 3,
+        "wrong": 412,
+        "reads": 18785,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12348,
+        "unsettled": 645,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 170,
+        "reads": 22283,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12343,
+        "unsettled": 645,
+        "two": 0,
+        "wavered": 6,
+        "wrong": 169,
+        "reads": 22283,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12171,
+        "unsettled": 196,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 796,
+        "reads": 18288,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12169,
+        "unsettled": 196,
+        "two": 0,
+        "wavered": 3,
+        "wrong": 795,
+        "reads": 18288,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12569,
+        "unsettled": 566,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 28,
+        "reads": 21005,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12569,
+        "unsettled": 566,
+        "two": 0,
+        "wavered": 3,
+        "wrong": 25,
+        "reads": 21005,
+        "maxReads": 12
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "knob": "stuck-0",
+   "points": [
+    {
+     "value": 0.0001,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.0003,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.001,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.003,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13161,
+        "unsettled": 2,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15979,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13161,
+        "unsettled": 2,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15979,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13054,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 109,
+        "reads": 15757,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13054,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 109,
+        "reads": 15757,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.01,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13107,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 56,
+        "reads": 15905,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13107,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 56,
+        "reads": 15905,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12955,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 208,
+        "reads": 15559,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12955,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 208,
+        "reads": 15559,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12941,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 222,
+        "reads": 15691,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12941,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 222,
+        "reads": 15691,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13111,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 52,
+        "reads": 15909,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13111,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 52,
+        "reads": 15909,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13161,
+        "unsettled": 2,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15979,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13161,
+        "unsettled": 2,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15979,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.03,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13162,
+        "unsettled": 1,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15970,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13162,
+        "unsettled": 1,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15970,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12872,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 291,
+        "reads": 16541,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12872,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 291,
+        "reads": 16541,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12996,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 167,
+        "reads": 16229,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12996,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 167,
+        "reads": 16229,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13048,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 115,
+        "reads": 15846,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13048,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 115,
+        "reads": 15846,
+        "maxReads": 3
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "knob": "stuck-1",
+   "points": [
+    {
+     "value": 0.0001,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12935,
+        "unsettled": 228,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 18013,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12935,
+        "unsettled": 228,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 18013,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13113,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 50,
+        "reads": 15913,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13113,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 50,
+        "reads": 15913,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.0003,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13133,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 30,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13133,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 30,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12781,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 382,
+        "reads": 16647,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12781,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 382,
+        "reads": 16647,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13026,
+        "unsettled": 1,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 136,
+        "reads": 16057,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13026,
+        "unsettled": 1,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 136,
+        "reads": 16057,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13163,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 0,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.001,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 57,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 13106,
+        "reads": 39489,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 57,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 13106,
+        "reads": 39489,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 135,
+        "unsettled": 779,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 12249,
+        "reads": 46365,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 135,
+        "unsettled": 779,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 12249,
+        "reads": 46365,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13048,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 115,
+        "reads": 15846,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13048,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 115,
+        "reads": 15846,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13095,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 68,
+        "reads": 15961,
+        "maxReads": 3
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13095,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 68,
+        "reads": 15961,
+        "maxReads": 3
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12709,
+        "unsettled": 63,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 391,
+        "reads": 16772,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12709,
+        "unsettled": 63,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 391,
+        "reads": 16772,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.003,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13029,
+        "unsettled": 84,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 50,
+        "reads": 16767,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13029,
+        "unsettled": 84,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 50,
+        "reads": 16767,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12877,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 286,
+        "reads": 16294,
+        "maxReads": 4
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12877,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 286,
+        "reads": 16294,
+        "maxReads": 4
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 13095,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 68,
+        "reads": 16029,
+        "maxReads": 4
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 13095,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 68,
+        "reads": 16029,
+        "maxReads": 4
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12984,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 179,
+        "reads": 15971,
+        "maxReads": 5
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12984,
+        "unsettled": 0,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 179,
+        "reads": 15971,
+        "maxReads": 5
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12313,
+        "unsettled": 5,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 845,
+        "reads": 16985,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12313,
+        "unsettled": 5,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 845,
+        "reads": 16985,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.01,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12515,
+        "unsettled": 161,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 487,
+        "reads": 17971,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12515,
+        "unsettled": 161,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 487,
+        "reads": 17971,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 160,
+        "unsettled": 478,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 12525,
+        "reads": 43680,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 160,
+        "unsettled": 478,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 12525,
+        "reads": 43680,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 13051,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 112,
+        "reads": 157032,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 13051,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 112,
+        "reads": 157032,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12383,
+        "unsettled": 570,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 210,
+        "reads": 21233,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12383,
+        "unsettled": 570,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 210,
+        "reads": 21233,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 12232,
+        "unsettled": 277,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 654,
+        "reads": 18616,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 12232,
+        "unsettled": 277,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 654,
+        "reads": 18616,
+        "maxReads": 12
+       }
+      }
+     ]
+    },
+    {
+     "value": 0.03,
+     "chips": [
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 11147,
+        "unsettled": 1028,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 988,
+        "reads": 27799,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 11147,
+        "unsettled": 1028,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 988,
+        "reads": 27799,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 12203,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 960,
+        "reads": 151487,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 12203,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 960,
+        "reads": 151487,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 101,
+        "unsettled": 1805,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 11257,
+        "reads": 55877,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 101,
+        "unsettled": 1805,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 11257,
+        "reads": 55877,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 11460,
+        "unsettled": 873,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 830,
+        "reads": 25170,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 11460,
+        "unsettled": 873,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 830,
+        "reads": 25170,
+        "maxReads": 12
+       }
+      },
+      {
+       "sealed": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 12594,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 569,
+        "reads": 154362,
+        "maxReads": 12
+       },
+       "sticky": {
+        "n": 13163,
+        "match": 0,
+        "unsettled": 12594,
+        "two": 0,
+        "wavered": 0,
+        "wrong": 569,
+        "reads": 154362,
+        "maxReads": 12
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "glitch": {
+  "sealed": {
+   "n": 276423,
+   "refused": 213512,
+   "ambiguous": 223790,
+   "ambiguousRefused": 212904,
+   "neither": 0
+  },
+  "sticky": {
+   "n": 276423,
+   "refused": 224398,
+   "ambiguous": 223790,
+   "ambiguousRefused": 223790,
+   "neither": 0
+  }
+ },
+ "frontend": {
+  "sealed": {
+   "n": 13163,
+   "refused": 12382,
+   "other": 261
+  },
+  "sticky": {
+   "n": 13163,
+   "refused": 12699,
+   "other": 48
+  }
+ },
+ "overdrive": {
+  "sealed": {
+   "n": 276423,
+   "refused": 0,
+   "ambiguous": 223790,
+   "ambiguousRefused": 0,
+   "neither": 51973
+  },
+  "sticky": {
+   "n": 276423,
+   "refused": 0,
+   "ambiguous": 223790,
+   "ambiguousRefused": 0,
+   "neither": 51973
+  }
+ },
+ "verdicts": {
+  "sealed": {
+   "LC2": "held",
+   "LC3": "failed",
+   "LC3chips": 1,
+   "LC4": "failed",
+   "LC5": [
+    {
+     "knob": "bits",
+     "last": 2,
+     "first": 1
+    },
+    {
+     "knob": "write",
+     "last": 0.05,
+     "first": 0.08
+    },
+    {
+     "knob": "read",
+     "last": 0.12,
+     "first": 0.2
+    },
+    {
+     "knob": "drift-raw",
+     "last": 60,
+     "first": 3600
+    },
+    {
+     "knob": "drift-comp",
+     "last": 60,
+     "first": 3600
+    },
+    {
+     "knob": "stuck-0",
+     "last": 0.001,
+     "first": 0.003
+    },
+    {
+     "knob": "stuck-1",
+     "last": null,
+     "first": 0.0001
+    }
+   ],
+   "LC6": [
+    {
+     "knob": "bits",
+     "nonmatch": 65570,
+     "refused": 65570,
+     "wrong": 0,
+     "verdict": "held"
+    },
+    {
+     "knob": "write",
+     "nonmatch": 78855,
+     "refused": 77425,
+     "wrong": 1430,
+     "verdict": "held"
+    },
+    {
+     "knob": "read",
+     "nonmatch": 130,
+     "refused": 40,
+     "wrong": 90,
+     "verdict": "failed"
+    },
+    {
+     "knob": "drift-raw",
+     "nonmatch": 15023,
+     "refused": 12919,
+     "wrong": 2104,
+     "verdict": "failed"
+    },
+    {
+     "knob": "drift-comp",
+     "nonmatch": 11923,
+     "refused": 7720,
+     "wrong": 4203,
+     "verdict": "failed"
+    },
+    {
+     "knob": "stuck-0",
+     "nonmatch": 1225,
+     "refused": 5,
+     "wrong": 1220,
+     "verdict": "failed"
+    },
+    {
+     "knob": "stuck-1",
+     "nonmatch": 100747,
+     "refused": 44200,
+     "wrong": 56547,
+     "verdict": "failed"
+    }
+   ],
+   "LC7": "held",
+   "LC8": "failed",
+   "LC9": {
+    "reported": 51973,
+    "of": 276423
+   }
+  },
+  "sticky": {
+   "LC2": "held",
+   "LC3": "failed",
+   "LC3chips": 1,
+   "LC4": "failed",
+   "LC5": [
+    {
+     "knob": "bits",
+     "last": 2,
+     "first": 1
+    },
+    {
+     "knob": "write",
+     "last": 0.03,
+     "first": 0.05
+    },
+    {
+     "knob": "read",
+     "last": 0.08,
+     "first": 0.12
+    },
+    {
+     "knob": "drift-raw",
+     "last": 60,
+     "first": 3600
+    },
+    {
+     "knob": "drift-comp",
+     "last": 60,
+     "first": 3600
+    },
+    {
+     "knob": "stuck-0",
+     "last": 0.001,
+     "first": 0.003
+    },
+    {
+     "knob": "stuck-1",
+     "last": null,
+     "first": 0.0001
+    }
+   ],
+   "LC6": [
+    {
+     "knob": "bits",
+     "nonmatch": 65815,
+     "refused": 65815,
+     "wrong": 0,
+     "verdict": "held"
+    },
+    {
+     "knob": "write",
+     "nonmatch": 82502,
+     "refused": 82502,
+     "wrong": 0,
+     "verdict": "held"
+    },
+    {
+     "knob": "read",
+     "nonmatch": 1321,
+     "refused": 1254,
+     "wrong": 67,
+     "verdict": "held"
+    },
+    {
+     "knob": "drift-raw",
+     "nonmatch": 15059,
+     "refused": 12995,
+     "wrong": 2064,
+     "verdict": "failed"
+    },
+    {
+     "knob": "drift-comp",
+     "nonmatch": 11954,
+     "refused": 7781,
+     "wrong": 4173,
+     "verdict": "failed"
+    },
+    {
+     "knob": "stuck-0",
+     "nonmatch": 1225,
+     "refused": 5,
+     "wrong": 1220,
+     "verdict": "failed"
+    },
+    {
+     "knob": "stuck-1",
+     "nonmatch": 100747,
+     "refused": 44200,
+     "wrong": 56547,
+     "verdict": "failed"
+    }
+   ],
+   "LC7": "held",
+   "LC8": "failed",
+   "LC9": {
+    "reported": 51973,
+    "of": 276423
+   }
+  }
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "claim": "LC10",
+ "machine": "win32 x64, Node v25.7.0",
+ "measuredAt": "2026-11-12T11:58:41.351Z",
+ "readsPerDecision": {
+  "mean": 1.2125655245764644,
+  "max": 3
+ },
+ "microsecondsPerDecision": {
+  "router": 26.70016713515156,
+  "emulatorIdeal": 4.192638456278964,
+  "emulatorAssumedDevice": 10.547185292106663
+ },
+ "note": "wall-clock time of the JavaScript emulator and the library router on this machine; not a chip, and no electrical energy is measured"
+}
